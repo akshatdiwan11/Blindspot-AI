@@ -1,0 +1,46 @@
+# Blindspot AI: PostgreSQL + FastAPI backend + web app.
+#   cp .env.example .env   (optional: add an OpenAI key for the AI investigator)
+#   docker compose up --build
+# Then open http://localhost:8080
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: blindspot
+      POSTGRES_PASSWORD: blindspot
+      POSTGRES_DB: blindspot
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U blindspot -d blindspot"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  backend:
+    build: ./backend
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      DATABASE_URL: postgresql+psycopg2://blindspot:blindspot@db:5432/blindspot
+      CORS_ORIGINS: http://localhost:8080
+      ENVIRONMENT: production
+    volumes:
+      - uploads:/app/storage
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "8000:8000"
+
+  frontend:
+    build: ./frontend
+    depends_on:
+      - backend
+    ports:
+      - "8080:80"
+
+volumes:
+  pgdata:
+  uploads:

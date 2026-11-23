@@ -1,0 +1,10 @@
+{
+  "name": "blindspot-ai",
+  "private": true,
+  "description": "Blindspot AI: find the hidden failure patterns behind your AI model's overall accuracy",
+  "scripts": {
+    "build": "cd frontend && npm ci && npm run build",
+    "dev:web": "npm --prefix frontend run dev",
+    "test:web": "npm --prefix frontend test"
+  }
+}

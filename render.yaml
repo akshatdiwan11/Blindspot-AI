@@ -1,0 +1,34 @@
+# Render Blueprint: deploys the Blindspot AI API (Docker) and its PostgreSQL database.
+# In Render: New > Blueprint > pick this repository.
+databases:
+  - name: blindspot-ai-db
+    plan: free
+    databaseName: blindspot
+    user: blindspot
+
+services:
+  - type: web
+    name: blindspot-ai-api
+    runtime: docker
+    plan: free
+    rootDir: backend
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /api/health
+    envVars:
+      - key: ENVIRONMENT
+        value: production
+      - key: DATABASE_URL
+        fromDatabase:
+          name: blindspot-ai-db
+          property: connectionString
+      # The website (Cloudflare Worker) calls the API through its own domain, so CORS is only
+      # needed if you call the API from somewhere else. Comma-separated origins.
+      - key: CORS_ORIGINS
+        sync: false
+      # Optional: enables the AI investigator. Leave empty to run without an LLM.
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: LLM_MODEL
+        value: gpt-4o-mini
+      - key: LLM_DAILY_BUDGET_USD
+        value: "2.0"

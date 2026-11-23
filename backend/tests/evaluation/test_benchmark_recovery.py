@@ -70,3 +70,45 @@ def test_clusters_found_on_demo(client):
     assert sum(c["size"] for c in clusters) == run["failure_count"]
     detail = client.get(f"/api/evaluations/{run['id']}/clusters/{clusters[0]['id']}").json()
     assert detail["examples"] and all(not e["correct"] for e in detail["examples"])
+
+
+def test_null_control_shuffled_labels_rarely_raise_false_alarms():
+    """With failure labels shuffled there is nothing real to find. Across 30 such runs the
+    engine may report a reliable group in at most 2 (the FDR target is 5% of runs)."""
+    import numpy as np
+
+    from app.evaluation.config import EvaluationConfig
+    from app.evaluation.runner import evaluate_records
+    from app.failure_discovery.engine import discover_failures
+    from app.failure_discovery.features import build_feature_frame
+
+    false_alarm_runs = 0
+    for key, spec in DEMOS.items():
+        records, _ = spec.generate()
+        config = EvaluationConfig.model_validate({"task_type": spec.task})
+        outcome, _ = evaluate_records(records, spec.mapping, config)
+        cases = outcome.cases
+        y = np.array([not c.correct for c in cases])
+        extra = {"expected_label": [c.details.get("expected_label", "") for c in cases]} if spec.task == "classification" else None
+        ff = build_feature_frame(records, [c.index for c in cases], spec.mapping, extra_categorical=extra)
+        rng = np.random.default_rng(7)
+        for _ in range(10):
+            res = discover_failures(ff, rng.permutation(y), config.discovery, task_type=spec.task)
+            false_alarm_runs += any(g.reliability == "reliable" for g in res.groups)
+    assert false_alarm_runs <= 2
+
+
+def test_landing_page_figures_match_the_engine(client):
+    """The landing page quotes real engine output on the deadline benchmark. Keep them in sync."""
+    import re
+    from pathlib import Path
+
+    src = (Path(__file__).resolve().parents[3] / "frontend" / "src" / "pages" / "Landing.tsx").read_text(encoding="utf-8")
+    quoted = {m[0]: (float(m[1]), int(m[2])) for m in re.findall(r'\{ rule: "([^"]+)", acc: ([\d.]+), n: (\d+)(?:, rest: true)? \}', src)}
+    _, groups = _load(client, "deadline_extraction")
+    found = {g["name"]: (round(1 - g["error_rate"], 3), g["sample_size"]) for g in groups if g["reliability"] == "reliable"}
+    for rule, (acc, n) in quoted.items():
+        if rule == "all other cases":
+            continue
+        assert rule in found, f"Landing page shows '{rule}', which the engine no longer reports"
+        assert found[rule][1] == n and abs(found[rule][0] - acc) < 0.001, (rule, found[rule], (acc, n))

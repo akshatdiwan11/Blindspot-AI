@@ -1,0 +1,17 @@
+{
+  // Cloudflare Worker that serves the Blindspot AI website and forwards /api/* to the API on Render.
+  "name": "blindspot-ai",
+  "main": "frontend/worker.ts",
+  "compatibility_date": "2025-06-01",
+  "assets": {
+    "directory": "frontend/dist",
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application",
+    "run_worker_first": ["/api/*"]
+  },
+  "vars": {
+    // Public URL of the Blindspot AI API on Render. Change it if Render gave your service a different name.
+    "API_ORIGIN": "https://blindspot-ai-api.onrender.com"
+  },
+  "observability": { "enabled": true }
+}

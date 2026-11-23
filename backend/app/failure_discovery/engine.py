@@ -23,6 +23,7 @@ Associations found here are correlations, not causes.
 from __future__ import annotations
 
 import itertools
+from collections import Counter
 import logging
 import math
 from dataclasses import dataclass, field
@@ -267,6 +268,56 @@ def _from_tree_leaf(conds, df, y, ho, cfg) -> DiscoveredGroup | None:
 SIMPLICITY_PENALTY = 0.3  # per extra condition: prefer "language = Hindi" over a 2-condition tree path
 
 
+def _cond_key(c: dict[str, Any]) -> tuple:
+    return (c["feature"], c["op"], str(c.get("value")), c.get("low"), c.get("high"))
+
+
+def _prefer_explaining_refinements(pool: list[DiscoveredGroup], y: np.ndarray, base: float) -> list[DiscoveredGroup]:
+    """Drop a broad rule when one narrower rule inside it explains its failures.
+
+    Example: "region = IN" fails at 21%, but only because "channel = chat AND region = IN" fails
+    at 45% while the other IN rows fail at the normal rate. Reporting the broad rule would point
+    people at the wrong slice, so the narrower rule is kept and the broad one is dropped. The
+    simplicity preference still applies whenever the broad rule has extra failures of its own.
+    """
+    dropped: set[int] = set()
+    for parent in pool:
+        p_keys = {_cond_key(c) for c in parent.conditions}
+        parent_excess = parent.k - parent.n * base
+        if parent_excess <= 0:
+            continue
+        best_child = None
+        for child in pool:
+            if child is parent or child.reliability != "reliable" or len(child.conditions) <= len(parent.conditions):
+                continue
+            if not p_keys <= {_cond_key(c) for c in child.conditions}:
+                continue
+            rest = parent.mask & ~child.mask
+            n_rest, k_rest = int(rest.sum()), int(y[rest].sum())
+            # Only a real narrowing counts: the leftover rows must be numerous enough to show they
+            # fail at the normal rate. Otherwise a near-copy of the broad rule (for example
+            # "Hinglish AND no numbers", 108 of 121 Hinglish rows) would replace the real cause.
+            if child.n > 0.75 * parent.n or n_rest < 20:
+                continue
+            others = ~parent.mask
+            n_o, k_o = int(others.sum()), int(y[others].sum())
+            # The rest of the broad group must not be elevated on its own...
+            if fisher_greater(k_rest, n_rest, k_o, n_o) <= 0.05 or k_rest / n_rest > base + 0.03:
+                continue
+            # ...and the narrow rule must carry most of the broad rule's excess failures.
+            if child.k - child.n * base < 0.8 * parent_excess:
+                continue
+            if best_child is None or child.p_value < best_child.p_value:
+                best_child = child
+        if best_child is not None:
+            dropped.add(id(parent))
+            rest = parent.mask & ~best_child.mask
+            best_child.notes.append(
+                f"Explains the raised error rate of the broader rule '{parent.name}': the rest of that group fails at "
+                f"{int(y[rest].sum()) / int(rest.sum()):.0%}, close to the overall {base:.0%}.")
+    return [g for g in pool if id(g) not in dropped]
+
+
 def _select_groups(candidates: list[DiscoveredGroup], y: np.ndarray, base: float, limit: int) -> list[DiscoveredGroup]:
     """Greedy sequential covering over candidate groups.
 
@@ -276,7 +327,7 @@ def _select_groups(candidates: list[DiscoveredGroup], y: np.ndarray, base: float
     """
     total = len(y)
     covered = np.zeros(total, dtype=bool)
-    pool = list(candidates)
+    pool = _prefer_explaining_refinements(list(candidates), y, base)
     kept: list[DiscoveredGroup] = []
     while pool and len(kept) < limit:
         best, best_key = None, None
@@ -382,20 +433,27 @@ def discover_failures(ff: FeatureFrame, failures: np.ndarray, cfg: DiscoveryConf
             g.notes.append(f"Both conditions add signal: each raises the error rate within the other (p = {p_b_given_a:.3f}, {p_a_given_b:.3f}).")
             pairs.append(g)
 
-    # Multiple-comparison correction across every hypothesis tested above.
-    qs = benjamini_hochberg([g.p_value for g in tested])
-    for g, q in zip(tested, qs):
-        g.q_value = q
-    summary["hypotheses_tested"] = len(tested)
-    summary["safeguards"].append(f"Benjamini-Hochberg correction across {len(tested)} subgroup tests (FDR {cfg.alpha:.0%}).")
-    summary["safeguards"].append(f"Subgroups smaller than {min_n} records were not tested.")
-
     tree_groups, tree_info = _tree_groups(ff, y, cfg)
     summary["tree"] = tree_info
+
+    # One multiple-comparison correction across everything searched: single conditions, the
+    # whole space of two-condition rules (pairs are only tried among conditions that already
+    # looked bad, so the ones screened out must still count), and held-out tree rules.
+    by_feature = Counter(c[0]["feature"] for c, _ in items)
+    pair_space = sum(a * b for a, b in itertools.combinations(by_feature.values(), 2))
+    n_pairs_tried = sum(1 for g in tested if g.method == "pair")
+    family = tested + tree_groups
+    m = len(family) + max(0, pair_space - n_pairs_tried)
+    qs = benjamini_hochberg([g.p_value for g in family], m=m)
+    for g, q in zip(family, qs):
+        g.q_value = q
+    summary["hypotheses_tested"] = len(family)
+    summary["hypothesis_family_size"] = m
+    summary["safeguards"].append(
+        f"Benjamini-Hochberg correction (FDR {cfg.alpha:.0%}) over the full search: {m:,} possible rules, "
+        f"including two-condition rules that were screened out before testing.")
+    summary["safeguards"].append(f"Subgroups smaller than {min_n} records were not tested.")
     if tree_groups:
-        tq = benjamini_hochberg([g.p_value for g in tree_groups])
-        for g, q in zip(tree_groups, tq):
-            g.q_value = q
         summary["safeguards"].append("Decision-tree rules are tested only on held-out rows the tree never saw.")
 
     candidates = [g for g in singles + pairs + tree_groups if g.n >= min_n and g.k >= MIN_FAILURES_IN_GROUP and g.rate > base]

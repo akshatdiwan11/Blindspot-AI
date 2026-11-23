@@ -102,3 +102,28 @@ def test_all_or_no_failures_handled():
     ff = build_feature_frame(records, list(range(50)), {"expected_column": "e", "actual_column": "a", "metadata_columns": []})
     assert discover_failures(ff, np.zeros(50, bool), DiscoveryConfig()).groups == []
     assert discover_failures(ff, np.ones(50, bool), DiscoveryConfig()).groups == []
+
+
+def _interaction(n=6000, seed=11):
+    """Failures come only from chat messages from IN; other IN rows fail at the normal rate."""
+    rng = np.random.default_rng(seed)
+    records, fails = [], []
+    for _ in range(n):
+        ch, rg = rng.choice(["email", "chat", "phone"]), rng.choice(["EU", "US", "IN", "BR"])
+        p = 0.45 if (ch == "chat" and rg == "IN") else 0.08
+        records.append({"channel": ch, "region": rg, "e": "x", "a": "y"})
+        fails.append(rng.random() < p)
+    return records, np.array(fails)
+
+
+def test_reports_the_narrow_rule_that_explains_a_broad_one():
+    records, y = _interaction()
+    ff = build_feature_frame(records, list(range(len(records))), {"expected_column": "e", "actual_column": "a", "metadata_columns": ["channel", "region"]})
+    res = discover_failures(ff, y, DiscoveryConfig())
+    reliable = [g for g in res.groups if g.reliability == "reliable"]
+    assert reliable, "the planted interaction must be found"
+    top = reliable[0]
+    assert {(c["feature"], c.get("value")) for c in top.conditions} == {("channel", "chat"), ("region", "IN")}
+    assert any("broader rule" in note for note in top.notes)
+    # The broad parents are not reported as separate weaknesses.
+    assert not any(g.conditions == [{"feature": "region", "op": "==", "value": "IN"}] for g in reliable)

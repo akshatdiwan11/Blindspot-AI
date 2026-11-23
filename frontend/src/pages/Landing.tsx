@@ -16,8 +16,8 @@ const SEGMENTS = [
   { rule: "date_mentions ≥ 3", acc: 0.489, n: 176 },
   { rule: "language = Hindi", acc: 0.603, n: 121 },
   { rule: "input_format = mostly_uppercase", acc: 0.66, n: 50 },
-  { rule: "page_count ≥ 7", acc: 0.701, n: 67 },
-  { rule: "all other cases", acc: 0.964, n: 549, rest: true },
+  { rule: "page_count ≥ 5", acc: 0.689, n: 103 },
+  { rule: "all other cases", acc: 0.97, n: 526, rest: true },
 ];
 
 function HeroVisual() {

@@ -39,15 +39,21 @@ def two_proportion_test(k1: int, n1: int, k2: int, n2: int) -> dict[str, float]:
     return {"z": z, "p_value": float(2 * (1 - norm.cdf(abs(z)))), "difference": p2 - p1}
 
 
-def benjamini_hochberg(pvalues: list[float]) -> list[float]:
-    """Adjusted q-values controlling the false discovery rate."""
-    m = len(pvalues)
-    if m == 0:
+def benjamini_hochberg(pvalues: list[float], m: int | None = None) -> list[float]:
+    """Adjusted q-values controlling the false discovery rate.
+
+    `m` is the size of the hypothesis family. It defaults to the number of p-values; pass a
+    larger number when the p-values shown are a data-driven subset of a bigger search, so the
+    hypotheses that were screened out still count (as if their p-values were 1).
+    """
+    n = len(pvalues)
+    if n == 0:
         return []
+    m = max(n, m or n)
     p = np.asarray(pvalues, dtype=float)
     order = np.argsort(p)
-    ranked = p[order] * m / np.arange(1, m + 1)
+    ranked = p[order] * m / np.arange(1, n + 1)
     q = np.minimum.accumulate(ranked[::-1])[::-1]
-    out = np.empty(m)
+    out = np.empty(n)
     out[order] = np.minimum(q, 1.0)
     return out.tolist()
