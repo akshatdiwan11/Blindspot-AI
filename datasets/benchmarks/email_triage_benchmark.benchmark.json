@@ -1,0 +1,51 @@
+{
+  "name": "Support email triage benchmark (synthetic)",
+  "synthetic": true,
+  "seed": 7310,
+  "records": 700,
+  "task": "classification",
+  "planted_patterns": [
+    {
+      "id": "hinglish",
+      "injected_error_rate": 0.3,
+      "expected_detection": {
+        "feature": "language",
+        "op": "==",
+        "value": "Hinglish"
+      }
+    },
+    {
+      "id": "very_short",
+      "injected_error_rate": 0.35,
+      "expected_detection": {
+        "feature": "input_length_words",
+        "op": "<",
+        "value": 4
+      }
+    },
+    {
+      "id": "fraud_class",
+      "injected_error_rate": 0.4,
+      "expected_detection": {
+        "feature": "expected_label",
+        "op": "==",
+        "value": "fraud"
+      }
+    }
+  ],
+  "base_error_rate": 0.03,
+  "dataset_file": "datasets/sample/email_triage_benchmark.csv",
+  "labels_file": "datasets/benchmarks/email_triage_benchmark.labels.csv",
+  "suggested_mapping": {
+    "input_column": "message",
+    "expected_column": "true_label",
+    "actual_column": "predicted_label",
+    "case_id_column": "ticket_id",
+    "metadata_columns": [
+      "channel",
+      "customer_tier",
+      "language"
+    ]
+  },
+  "observed_error_rate": 0.1614
+}

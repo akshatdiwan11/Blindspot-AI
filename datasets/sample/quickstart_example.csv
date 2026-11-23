@@ -1,0 +1,5 @@
+case_id,input_text,expected_output,actual_output,language,document_type,source
+1,"Extract the application deadline","15 December","20 December","English","Scholarship","PDF"
+2,"Summarize this document","The policy was updated","The policy is unchanged","English","Policy","PDF"
+3,"Classify this email","Fraud","Normal","English","Email","Web"
+4,"Extract the candidate name","Akshat Diwan","Akshat Diwan","English","Resume","PDF"

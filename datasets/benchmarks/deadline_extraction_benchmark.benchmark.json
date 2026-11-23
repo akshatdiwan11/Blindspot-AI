@@ -1,0 +1,85 @@
+{
+  "name": "Deadline extraction benchmark (synthetic)",
+  "synthetic": true,
+  "seed": 20251123,
+  "records": 900,
+  "task": "text",
+  "description": "A simulated extraction model reads scholarship, admission and exam notices and returns the application deadline. Errors were injected with known probabilities under the planted conditions below.",
+  "planted_patterns": [
+    {
+      "id": "multi_date",
+      "description": "Document contains a publication date and an exam date besides the deadline",
+      "injected_error_rate": 0.4,
+      "mechanism": "returns the first date in the text (publication date)",
+      "expected_detection": {
+        "feature": "date_mentions",
+        "op": ">=",
+        "value": 2
+      }
+    },
+    {
+      "id": "hindi",
+      "description": "Document is written in Hindi",
+      "injected_error_rate": 0.3,
+      "mechanism": "swaps day and month, or returns a bare day/month",
+      "expected_detection": {
+        "feature": "language",
+        "op": "==",
+        "value": "Hindi"
+      }
+    },
+    {
+      "id": "unusual_format",
+      "description": "Table-like or all-caps layout",
+      "injected_error_rate": 0.26,
+      "mechanism": "drops the year and abbreviates the month",
+      "expected_detection": {
+        "feature": "input_format",
+        "op": "in",
+        "value": [
+          "table_like",
+          "mostly_uppercase"
+        ]
+      }
+    },
+    {
+      "id": "long_document",
+      "description": "Long notice (many paragraphs, 4+ pages)",
+      "injected_error_rate": 0.15,
+      "mechanism": "returns 'Not found'",
+      "expected_detection": {
+        "feature": "page_count",
+        "op": ">=",
+        "value": 4
+      }
+    },
+    {
+      "id": "mixed_language",
+      "description": "Hindi-English mixed document",
+      "injected_error_rate": 0.07,
+      "mechanism": "off-by-one-day deadline",
+      "expected_detection": {
+        "feature": "language",
+        "op": "==",
+        "value": "Mixed"
+      },
+      "note": "weak effect; may legitimately be reported as tentative or not at all"
+    }
+  ],
+  "base_error_rate": 0.015,
+  "dataset_file": "datasets/sample/deadline_extraction_benchmark.csv",
+  "labels_file": "datasets/benchmarks/deadline_extraction_benchmark.labels.csv",
+  "suggested_mapping": {
+    "input_column": "input_text",
+    "expected_column": "expected_output",
+    "actual_column": "actual_output",
+    "case_id_column": "case_id",
+    "metadata_columns": [
+      "language",
+      "document_type",
+      "source",
+      "page_count"
+    ]
+  },
+  "observed_error_rate": 0.1744
+}

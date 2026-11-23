@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import logging
 import time
+from contextlib import asynccontextmanager
 
 from fastapi import FastAPI, Request
 from fastapi.exceptions import RequestValidationError
@@ -19,7 +20,14 @@ settings = get_settings()
 configure_logging(settings.log_level)
 log = logging.getLogger("blindspot")
 
+@asynccontextmanager
+async def lifespan(_: FastAPI):
+    on_startup()
+    yield
+
+
 app = FastAPI(
+    lifespan=lifespan,
     title="Blindspot AI API",
     version="1.0.0",
     description="Find the failures your overall metrics hide. Deterministic evaluation, failure discovery, "
@@ -68,11 +76,6 @@ async def request_validation_handler(_: Request, exc: RequestValidationError):
 async def unhandled_error_handler(_: Request, exc: Exception):
     log.exception("Unhandled error: %s", exc)
     return JSONResponse(status_code=500, content={"error": {"code": "internal_error", "message": "Something went wrong on the server. The error has been logged."}})
-
-
-@app.on_event("startup")
-def _startup() -> None:
-    on_startup()
 
 
 app.include_router(api_router, prefix="/api")

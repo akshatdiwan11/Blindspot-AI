@@ -1,0 +1,701 @@
+ticket_id,message,true_label,predicted_label,channel,customer_tier,language
+EM-0001,charged twice??,Billing,Billing,Chat,Enterprise,English
+EM-0002,Export to CSV produces an empty file even though the table has data.,Technical,Billing,Email,Pro,English
+EM-0003,"I was charged twice for my subscription this month, please refund the extra amount.",Billing,Billing,Email,Pro,English
+EM-0004,App baar baar crash ho raha hai jab main file upload karta hoon. Thanks.,Technical,Technical,Chat,Free,Hinglish
+EM-0005,My invoice shows a higher amount than the plan I selected during signup.,Billing,Billing,Email,Pro,English
+EM-0006,Export to CSV produces an empty file even though the table has data.,Technical,Technical,Chat,Free,English
+EM-0007,Can you explain the late fee added to my last bill? Please reply soon.,Billing,Billing,Chat,Free,English
+EM-0008,Please help me change the email address linked to my account. Thanks.,Account,Account,Web form,Free,English
+EM-0009,What are your support hours during public holidays?,General,General,Web form,Free,English
+EM-0010,Someone logged into my account from another country and changed my payout details. Please reply soon.,Fraud,Fraud,Chat,Free,English
+EM-0011,charged twice??,Billing,Billing,Email,Enterprise,English
+EM-0012,Kisi ne mere account mein login karke payout details badal di hain. Please reply soon.,Fraud,Fraud,Web form,Free,Hinglish
+EM-0013,Aapka office Bengaluru mein hai kya? Visit karna tha.,General,General,Email,Pro,Hinglish
+EM-0014,"I cannot connect to the dashboard since the update, it keeps loading forever.",Technical,Technical,Chat,Enterprise,English
+EM-0015,"Mera subscription do baar charge ho gaya, extra paisa refund kar do please.",Billing,Billing,Web form,Enterprise,Hinglish
+EM-0016,app broken,Technical,Technical,Email,Free,English
+EM-0017,I want to add a second admin user to our team workspace. Order ref 86794.,Account,Account,Web form,Pro,English
+EM-0018,"Update ke baad dashboard khul hi nahi raha, sirf loading dikh raha hai.",Technical,Technical,Web form,Enterprise,Hinglish
+EM-0019,"I was charged twice for my subscription this month, please refund the extra amount. Please reply soon.",Billing,Billing,Web form,Pro,English
+EM-0020,How do I reset my password? The reset link expired. Thanks.,Account,Account,Email,Enterprise,English
+EM-0021,reset password,Account,Account,Email,Free,Hinglish
+EM-0022,app broken,Technical,Technical,Chat,Pro,Hinglish
+EM-0023,change email,Account,Account,Email,Free,Hinglish
+EM-0024,I want to add a second admin user to our team workspace. Thanks.,Account,Account,Web form,Free,English
+EM-0025,I want to add a second admin user to our team workspace.,Account,Account,Web form,Free,English
+EM-0026,"Mera subscription do baar charge ho gaya, extra paisa refund kar do please.",Billing,Account,Web form,Pro,Hinglish
+EM-0027,Please help me change the email address linked to my account. Thanks.,Account,Account,Web form,Free,English
+EM-0028,What are your support hours during public holidays?,General,General,Chat,Free,English
+EM-0029,The app crashes every time I try to upload a file larger than 10 MB. Order ref 97266.,Technical,Technical,Chat,Enterprise,English
+EM-0030,app broken,Technical,General,Email,Pro,English
+EM-0031,Can you explain the late fee added to my last bill? Thanks.,Billing,Billing,Web form,Pro,English
+EM-0032,Can you explain the late fee added to my last bill? Order ref 73506.,Billing,Billing,Chat,Free,English
+EM-0033,The app crashes every time I try to upload a file larger than 10 MB.,Technical,Technical,Chat,Free,English
+EM-0034,I want to add a second admin user to our team workspace.,Account,Account,Web form,Enterprise,English
+EM-0035,app broken,Technical,General,Web form,Free,Hinglish
+EM-0036,"I was charged twice for my subscription this month, please refund the extra amount. Thanks.",Billing,Billing,Web form,Enterprise,English
+EM-0037,app broken,Technical,Technical,Email,Pro,English
+EM-0038,Export to CSV produces an empty file even though the table has data. Please reply soon.,Technical,Technical,Email,Pro,English
+EM-0039,How do I reset my password? The reset link expired.,Account,Account,Web form,Free,English
+EM-0040,"There are transactions on my account that I did not make, please freeze it. Please reply soon.",Fraud,Fraud,Web form,Enterprise,English
+EM-0041,app broken,Technical,General,Web form,Enterprise,English
+EM-0042,Export to CSV produces an empty file even though the table has data. Thanks.,Technical,Technical,Web form,Free,English
+EM-0043,Can you explain the late fee added to my last bill? Order ref 99011.,Billing,Billing,Web form,Free,English
+EM-0044,The app crashes every time I try to upload a file larger than 10 MB. Order ref 26491.,Technical,Technical,Chat,Enterprise,English
+EM-0045,How do I reset my password? The reset link expired. Please reply soon.,Account,Account,Web form,Enterprise,English
+EM-0046,I want to add a second admin user to our team workspace.,Account,Account,Web form,Free,English
+EM-0047,change email,Account,Technical,Web form,Pro,English
+EM-0048,Can you explain the late fee added to my last bill? Please reply soon.,Billing,Billing,Web form,Enterprise,English
+EM-0049,Is there a student discount for your annual plan? Please reply soon.,General,General,Email,Pro,English
+EM-0050,I want to add a second admin user to our team workspace.,Account,Account,Email,Free,English
+EM-0051,Do you have an office in Bengaluru where I can visit?,General,General,Email,Enterprise,English
+EM-0052,"There are transactions on my account that I did not make, please freeze it. Thanks.",Fraud,Fraud,Chat,Free,English
+EM-0053,"There are transactions on my account that I did not make, please freeze it. Please reply soon.",Fraud,Account,Email,Free,English
+EM-0054,How do I reset my password? The reset link expired. Thanks.,Account,Technical,Chat,Free,English
+EM-0055,App baar baar crash ho raha hai jab main file upload karta hoon.,Technical,Technical,Email,Enterprise,Hinglish
+EM-0056,The app crashes every time I try to upload a file larger than 10 MB. Order ref 73871.,Technical,Technical,Email,Pro,English
+EM-0057,I want to add a second admin user to our team workspace. Thanks.,Account,Account,Chat,Free,English
+EM-0058,How do I reset my password? The reset link expired.,Account,Account,Email,Free,English
+EM-0059,Can you explain the late fee added to my last bill? Order ref 22162.,Billing,Billing,Email,Enterprise,English
+EM-0060,Student discount milta hai kya annual plan pe? Thanks.,General,General,Chat,Pro,Hinglish
+EM-0061,"There are transactions on my account that I did not make, please freeze it. Thanks.",Fraud,Fraud,Chat,Pro,English
+EM-0062,refund pls,Billing,Account,Email,Enterprise,English
+EM-0063,"I received an email asking for my card PIN that claims to be from you, is this real? Order ref 16233.",Fraud,Fraud,Email,Pro,English
+EM-0064,Someone logged into my account from another country and changed my payout details.,Fraud,Account,Web form,Pro,English
+EM-0065,reset password,Account,Account,Chat,Pro,English
+EM-0066,I want to add a second admin user to our team workspace.,Account,Account,Email,Enterprise,English
+EM-0067,Please help me change the email address linked to my account. Please reply soon.,Account,Account,Email,Enterprise,English
+EM-0068,reset password,Account,Account,Email,Pro,English
+EM-0069,"I was charged twice for my subscription this month, please refund the extra amount.",Billing,Billing,Chat,Enterprise,English
+EM-0070,Is there a student discount for your annual plan?,General,General,Email,Pro,English
+EM-0071,hacked!!,Fraud,Account,Chat,Enterprise,Hinglish
+EM-0072,"Update ke baad dashboard khul hi nahi raha, sirf loading dikh raha hai. Order ref 32481.",Technical,Technical,Email,Free,Hinglish
+EM-0073,"Bill mein late fee kyun lagi hai, maine time pe payment kiya tha.",Billing,Billing,Chat,Free,Hinglish
+EM-0074,Student discount milta hai kya annual plan pe? Order ref 55117.,General,General,Email,Pro,Hinglish
+EM-0075,"I was charged twice for my subscription this month, please refund the extra amount. Please reply soon.",Billing,Billing,Email,Pro,English
+EM-0076,Do you have an office in Bengaluru where I can visit? Order ref 24081.,General,General,Chat,Pro,English
+EM-0077,Can you explain the late fee added to my last bill? Please reply soon.,Billing,Billing,Email,Pro,English
+EM-0078,I want to add a second admin user to our team workspace.,Account,Account,Web form,Enterprise,English
+EM-0079,My invoice shows a higher amount than the plan I selected during signup. Order ref 45906.,Billing,Billing,Email,Free,English
+EM-0080,Export to CSV produces an empty file even though the table has data. Please reply soon.,Technical,Technical,Web form,Free,English
+EM-0081,"Mujhe apne account ka email change karna hai, kaise karun?",Account,Technical,Email,Enterprise,Hinglish
+EM-0082,Export to CSV produces an empty file even though the table has data. Thanks.,Technical,Technical,Chat,Pro,English
+EM-0083,I want to add a second admin user to our team workspace. Thanks.,Account,Account,Chat,Pro,English
+EM-0084,Someone logged into my account from another country and changed my payout details. Order ref 53968.,Fraud,Fraud,Chat,Pro,English
+EM-0085,Export to CSV produces an empty file even though the table has data. Please reply soon.,Technical,Technical,Web form,Enterprise,English
+EM-0086,"I was charged twice for my subscription this month, please refund the extra amount. Please reply soon.",Billing,Billing,Chat,Enterprise,English
+EM-0087,How do I reset my password? The reset link expired.,Account,Account,Web form,Enterprise,English
+EM-0088,Please help me change the email address linked to my account.,Account,Technical,Chat,Enterprise,English
+EM-0089,How do I reset my password? The reset link expired.,Account,Account,Email,Free,English
+EM-0090,"I received an email asking for my card PIN that claims to be from you, is this real?",Fraud,Fraud,Email,Enterprise,English
+EM-0091,How do I reset my password? The reset link expired. Thanks.,Account,Account,Chat,Pro,English
+EM-0092,Export to CSV produces an empty file even though the table has data.,Technical,Technical,Chat,Pro,English
+EM-0093,My invoice shows a higher amount than the plan I selected during signup.,Billing,Billing,Email,Enterprise,English
+EM-0094,discount?,General,General,Web form,Free,English
+EM-0095,I want to add a second admin user to our team workspace.,Account,Account,Chat,Pro,English
+EM-0096,The app crashes every time I try to upload a file larger than 10 MB. Thanks.,Technical,Technical,Email,Pro,English
+EM-0097,App baar baar crash ho raha hai jab main file upload karta hoon. Thanks.,Technical,Technical,Email,Pro,Hinglish
+EM-0098,The app crashes every time I try to upload a file larger than 10 MB. Please reply soon.,Technical,Technical,Web form,Pro,English
+EM-0099,"Mere account pe aise transactions hain jo maine nahi kiye, turant block karo. Thanks.",Fraud,Account,Email,Enterprise,Hinglish
+EM-0100,The app crashes every time I try to upload a file larger than 10 MB. Please reply soon.,Technical,Fraud,Web form,Free,English
+EM-0101,My invoice shows a higher amount than the plan I selected during signup. Please reply soon.,Billing,Billing,Web form,Pro,English
+EM-0102,Someone logged into my account from another country and changed my payout details.,Fraud,Fraud,Email,Pro,English
+EM-0103,"I was charged twice for my subscription this month, please refund the extra amount. Please reply soon.",Billing,Billing,Web form,Enterprise,English
+EM-0104,"I was charged twice for my subscription this month, please refund the extra amount.",Billing,Billing,Web form,Pro,English
+EM-0105,Export to CSV produces an empty file even though the table has data.,Technical,Technical,Email,Pro,English
+EM-0106,"I was charged twice for my subscription this month, please refund the extra amount.",Billing,Billing,Email,Enterprise,English
+EM-0107,"Update ke baad dashboard khul hi nahi raha, sirf loading dikh raha hai.",Technical,General,Email,Free,Hinglish
+EM-0108,How do I reset my password? The reset link expired.,Account,Account,Chat,Free,English
+EM-0109,"I was charged twice for my subscription this month, please refund the extra amount.",Billing,Billing,Chat,Free,English
+EM-0110,I want to add a second admin user to our team workspace. Thanks.,Account,Technical,Chat,Free,English
+EM-0111,"I received an email asking for my card PIN that claims to be from you, is this real? Order ref 25944.",Fraud,Account,Chat,Pro,English
+EM-0112,I want to add a second admin user to our team workspace. Order ref 93105.,Account,Account,Chat,Pro,English
+EM-0113,"Mujhe apne account ka email change karna hai, kaise karun?",Account,Technical,Web form,Free,Hinglish
+EM-0114,reset password,Account,Technical,Chat,Enterprise,Hinglish
+EM-0115,Please help me change the email address linked to my account.,Account,Account,Chat,Pro,English
+EM-0116,"Update ke baad dashboard khul hi nahi raha, sirf loading dikh raha hai. Thanks.",Technical,Technical,Web form,Enterprise,Hinglish
+EM-0117,The app crashes every time I try to upload a file larger than 10 MB.,Technical,Technical,Chat,Enterprise,English
+EM-0118,What are your support hours during public holidays?,General,General,Web form,Free,English
+EM-0119,Export to CSV produces an empty file even though the table has data. Thanks.,Technical,Technical,Web form,Free,English
+EM-0120,I want to add a second admin user to our team workspace. Thanks.,Account,Account,Chat,Enterprise,English
+EM-0121,What are your support hours during public holidays? Order ref 31159.,General,General,Web form,Pro,English
+EM-0122,Do you have an office in Bengaluru where I can visit? Thanks.,General,General,Web form,Free,English
+EM-0123,"I was charged twice for my subscription this month, please refund the extra amount. Order ref 20086.",Billing,Billing,Chat,Free,English
+EM-0124,"I was charged twice for my subscription this month, please refund the extra amount. Please reply soon.",Billing,Billing,Email,Pro,English
+EM-0125,The app crashes every time I try to upload a file larger than 10 MB.,Technical,Technical,Chat,Free,English
+EM-0126,"I was charged twice for my subscription this month, please refund the extra amount. Order ref 30054.",Billing,Billing,Chat,Pro,English
+EM-0127,Can you explain the late fee added to my last bill?,Billing,Billing,Email,Pro,English
+EM-0128,not loading,Technical,Technical,Email,Enterprise,English
+EM-0129,"Password reset link expire ho gaya, naya link bhejo. Order ref 71040.",Account,Account,Email,Free,Hinglish
+EM-0130,change email,Account,Technical,Chat,Enterprise,English
+EM-0131,"I received an email asking for my card PIN that claims to be from you, is this real?",Fraud,Account,Chat,Enterprise,English
+EM-0132,office hours?,General,General,Web form,Free,English
+EM-0133,Someone logged into my account from another country and changed my payout details. Please reply soon.,Fraud,Account,Chat,Free,English
+EM-0134,I want to add a second admin user to our team workspace.,Account,Account,Web form,Enterprise,English
+EM-0135,I want to add a second admin user to our team workspace. Thanks.,Account,Account,Chat,Enterprise,English
+EM-0136,The app crashes every time I try to upload a file larger than 10 MB.,Technical,Technical,Chat,Free,English
+EM-0137,Export to CSV produces an empty file even though the table has data. Thanks.,Technical,Technical,Email,Free,English
+EM-0138,"Password reset link expire ho gaya, naya link bhejo. Thanks.",Account,Account,Web form,Pro,Hinglish
+EM-0139,"I was charged twice for my subscription this month, please refund the extra amount. Order ref 68337.",Billing,Billing,Chat,Free,English
+EM-0140,I want to add a second admin user to our team workspace.,Account,Account,Web form,Pro,English
+EM-0141,How do I reset my password? The reset link expired.,Account,Account,Email,Pro,English
+EM-0142,My invoice shows a higher amount than the plan I selected during signup.,Billing,Billing,Web form,Free,English
+EM-0143,The app crashes every time I try to upload a file larger than 10 MB.,Technical,Technical,Web form,Free,English
+EM-0144,"Update ke baad dashboard khul hi nahi raha, sirf loading dikh raha hai. Thanks.",Technical,Technical,Email,Pro,Hinglish
+EM-0145,My invoice shows a higher amount than the plan I selected during signup.,Billing,Billing,Email,Free,English
+EM-0146,Can you explain the late fee added to my last bill? Order ref 71314.,Billing,Billing,Chat,Free,English
+EM-0147,change email,Account,Account,Email,Enterprise,English
+EM-0148,"I cannot connect to the dashboard since the update, it keeps loading forever.",Technical,Technical,Chat,Pro,English
+EM-0149,How do I reset my password? The reset link expired.,Account,Account,Email,Pro,English
+EM-0150,"I cannot connect to the dashboard since the update, it keeps loading forever. Order ref 59882.",Technical,Technical,Chat,Free,English
+EM-0151,How do I reset my password? The reset link expired.,Account,Account,Web form,Pro,English
+EM-0152,Please help me change the email address linked to my account.,Account,Account,Email,Enterprise,English
+EM-0153,app broken,Technical,Technical,Chat,Pro,English
+EM-0154,Export to CSV produces an empty file even though the table has data.,Technical,Technical,Web form,Pro,English
+EM-0155,"Password reset link expire ho gaya, naya link bhejo.",Account,Account,Email,Pro,Hinglish
+EM-0156,My invoice shows a higher amount than the plan I selected during signup. Please reply soon.,Billing,Billing,Email,Pro,English
+EM-0157,Is there a student discount for your annual plan? Order ref 86425.,General,General,Email,Free,English
+EM-0158,"I was charged twice for my subscription this month, please refund the extra amount. Order ref 98060.",Billing,Billing,Email,Free,English
+EM-0159,How do I reset my password? The reset link expired. Thanks.,Account,Account,Chat,Free,English
+EM-0160,Can you explain the late fee added to my last bill? Thanks.,Billing,Billing,Chat,Free,English
+EM-0161,What are your support hours during public holidays?,General,General,Chat,Pro,English
+EM-0162,Please help me change the email address linked to my account.,Account,Account,Web form,Free,English
+EM-0163,"Bill mein late fee kyun lagi hai, maine time pe payment kiya tha. Please reply soon.",Billing,Account,Chat,Enterprise,Hinglish
+EM-0164,Do you have an office in Bengaluru where I can visit?,General,Billing,Chat,Free,English
+EM-0165,Do you have an office in Bengaluru where I can visit?,General,General,Web form,Pro,English
+EM-0166,Can you explain the late fee added to my last bill? Please reply soon.,Billing,Billing,Web form,Enterprise,English
+EM-0167,app broken,Technical,General,Web form,Enterprise,English
+EM-0168,Do you have an office in Bengaluru where I can visit? Thanks.,General,General,Chat,Free,English
+EM-0169,"I was charged twice for my subscription this month, please refund the extra amount.",Billing,Billing,Web form,Enterprise,English
+EM-0170,My invoice shows a higher amount than the plan I selected during signup.,Billing,Billing,Web form,Enterprise,English
+EM-0171,Export to CSV produces an empty file even though the table has data. Thanks.,Technical,Technical,Chat,Pro,English
+EM-0172,How do I reset my password? The reset link expired. Please reply soon.,Account,Account,Chat,Enterprise,English
+EM-0173,Kisi ne mere account mein login karke payout details badal di hain. Please reply soon.,Fraud,Fraud,Web form,Enterprise,Hinglish
+EM-0174,How do I reset my password? The reset link expired. Please reply soon.,Account,Account,Email,Enterprise,English
+EM-0175,Do you have an office in Bengaluru where I can visit? Thanks.,General,General,Web form,Enterprise,English
+EM-0176,"There are transactions on my account that I did not make, please freeze it.",Fraud,Fraud,Web form,Free,English
+EM-0177,"There are transactions on my account that I did not make, please freeze it.",Fraud,Fraud,Web form,Enterprise,English
+EM-0178,"Mera subscription do baar charge ho gaya, extra paisa refund kar do please. Order ref 77385.",Billing,Billing,Email,Free,Hinglish
+EM-0179,"There are transactions on my account that I did not make, please freeze it. Thanks.",Fraud,Account,Chat,Free,English
+EM-0180,App baar baar crash ho raha hai jab main file upload karta hoon.,Technical,Technical,Chat,Enterprise,Hinglish
+EM-0181,Someone logged into my account from another country and changed my payout details. Order ref 17390.,Fraud,Fraud,Chat,Enterprise,English
+EM-0182,"I was charged twice for my subscription this month, please refund the extra amount.",Billing,Billing,Chat,Free,English
+EM-0183,Please help me change the email address linked to my account.,Account,Account,Web form,Pro,English
+EM-0184,"I was charged twice for my subscription this month, please refund the extra amount. Please reply soon.",Billing,Billing,Chat,Free,English
+EM-0185,I want to add a second admin user to our team workspace. Thanks.,Account,Account,Web form,Free,English
+EM-0186,My invoice shows a higher amount than the plan I selected during signup. Please reply soon.,Billing,Billing,Chat,Free,English
+EM-0187,Please help me change the email address linked to my account.,Account,Account,Email,Enterprise,English
+EM-0188,"I was charged twice for my subscription this month, please refund the extra amount. Thanks.",Billing,Billing,Email,Pro,English
+EM-0189,My invoice shows a higher amount than the plan I selected during signup.,Billing,Billing,Web form,Free,English
+EM-0190,Can you explain the late fee added to my last bill?,Billing,Billing,Chat,Pro,English
+EM-0191,"Update ke baad dashboard khul hi nahi raha, sirf loading dikh raha hai. Please reply soon.",Technical,General,Web form,Free,Hinglish
+EM-0192,charged twice??,Billing,Billing,Chat,Enterprise,English
+EM-0193,Can you explain the late fee added to my last bill?,Billing,Fraud,Web form,Pro,English
+EM-0194,refund pls,Billing,Billing,Web form,Free,English
+EM-0195,reset password,Account,Technical,Web form,Free,English
+EM-0196,change email,Account,Account,Email,Pro,English
+EM-0197,Someone logged into my account from another country and changed my payout details.,Fraud,Fraud,Chat,Enterprise,English
+EM-0198,Please help me change the email address linked to my account.,Account,Account,Web form,Pro,English
+EM-0199,"Password reset link expire ho gaya, naya link bhejo.",Account,Technical,Web form,Pro,Hinglish
+EM-0200,Export to CSV produces an empty file even though the table has data.,Technical,Technical,Web form,Pro,English
+EM-0201,app broken,Technical,General,Web form,Enterprise,Hinglish
+EM-0202,The app crashes every time I try to upload a file larger than 10 MB. Thanks.,Technical,Technical,Chat,Free,English
+EM-0203,I want to add a second admin user to our team workspace. Order ref 44170.,Account,Account,Chat,Free,English
+EM-0204,refund pls,Billing,Technical,Web form,Enterprise,English
+EM-0205,Someone logged into my account from another country and changed my payout details. Order ref 90805.,Fraud,Account,Chat,Pro,English
+EM-0206,"I was charged twice for my subscription this month, please refund the extra amount.",Billing,Billing,Email,Enterprise,English
+EM-0207,change email,Account,Technical,Chat,Enterprise,English
+EM-0208,I want to add a second admin user to our team workspace.,Account,Account,Web form,Free,English
+EM-0209,Export to CSV produces an empty file even though the table has data. Thanks.,Technical,Technical,Web form,Free,English
+EM-0210,Can you explain the late fee added to my last bill? Order ref 33022.,Billing,Billing,Email,Enterprise,English
+EM-0211,"Password reset link expire ho gaya, naya link bhejo. Thanks.",Account,Account,Chat,Enterprise,Hinglish
+EM-0212,The app crashes every time I try to upload a file larger than 10 MB. Order ref 40519.,Technical,Technical,Web form,Pro,English
+EM-0213,Export to CSV produces an empty file even though the table has data. Order ref 65928.,Technical,Technical,Email,Pro,English
+EM-0214,Is there a student discount for your annual plan?,General,General,Web form,Enterprise,English
+EM-0215,My invoice shows a higher amount than the plan I selected during signup.,Billing,Billing,Web form,Free,English
+EM-0216,Can you explain the late fee added to my last bill?,Billing,Billing,Web form,Enterprise,English
+EM-0217,App baar baar crash ho raha hai jab main file upload karta hoon.,Technical,General,Email,Pro,Hinglish
+EM-0218,The app crashes every time I try to upload a file larger than 10 MB. Order ref 80728.,Technical,Technical,Chat,Pro,English
+EM-0219,"I was charged twice for my subscription this month, please refund the extra amount. Thanks.",Billing,Billing,Chat,Free,English
+EM-0220,Is there a student discount for your annual plan? Please reply soon.,General,General,Web form,Pro,English
+EM-0221,Export to CSV produces an empty file even though the table has data. Please reply soon.,Technical,Technical,Chat,Free,English
+EM-0222,My invoice shows a higher amount than the plan I selected during signup.,Billing,Billing,Web form,Free,English
+EM-0223,Please help me change the email address linked to my account. Thanks.,Account,Account,Email,Enterprise,English
+EM-0224,Do you have an office in Bengaluru where I can visit? Please reply soon.,General,General,Chat,Pro,English
+EM-0225,Please help me change the email address linked to my account.,Account,Account,Chat,Enterprise,English
+EM-0226,app broken,Technical,Technical,Email,Pro,English
+EM-0227,App baar baar crash ho raha hai jab main file upload karta hoon. Order ref 64376.,Technical,General,Email,Pro,Hinglish
+EM-0228,Is there a student discount for your annual plan? Please reply soon.,General,General,Web form,Pro,English
+EM-0229,"I cannot connect to the dashboard since the update, it keeps loading forever.",Technical,Technical,Email,Free,English
+EM-0230,App baar baar crash ho raha hai jab main file upload karta hoon. Order ref 29529.,Technical,Technical,Chat,Free,Hinglish
+EM-0231,"I cannot connect to the dashboard since the update, it keeps loading forever.",Technical,Technical,Web form,Enterprise,English
+EM-0232,Export to CSV produces an empty file even though the table has data.,Technical,Technical,Email,Enterprise,English
+EM-0233,"I cannot connect to the dashboard since the update, it keeps loading forever. Order ref 47986.",Technical,Technical,Web form,Free,English
+EM-0234,reset password,Account,Billing,Email,Free,English
+EM-0235,"I cannot connect to the dashboard since the update, it keeps loading forever. Order ref 68850.",Technical,Technical,Web form,Pro,English
+EM-0236,"I cannot connect to the dashboard since the update, it keeps loading forever.",Technical,Technical,Chat,Pro,English
+EM-0237,Someone logged into my account from another country and changed my payout details. Order ref 29429.,Fraud,Account,Email,Pro,English
+EM-0238,Please help me change the email address linked to my account.,Account,Account,Chat,Free,English
+EM-0239,Please help me change the email address linked to my account.,Account,Account,Chat,Free,English
+EM-0240,"I was charged twice for my subscription this month, please refund the extra amount. Please reply soon.",Billing,Billing,Email,Enterprise,English
+EM-0241,not loading,Technical,Technical,Web form,Free,English
+EM-0242,What are your support hours during public holidays?,General,General,Email,Free,English
+EM-0243,"There are transactions on my account that I did not make, please freeze it. Order ref 72276.",Fraud,Fraud,Web form,Pro,English
+EM-0244,App baar baar crash ho raha hai jab main file upload karta hoon.,Technical,Technical,Chat,Free,Hinglish
+EM-0245,I want to add a second admin user to our team workspace.,Account,Account,Chat,Free,English
+EM-0246,How do I reset my password? The reset link expired. Thanks.,Account,Account,Email,Pro,English
+EM-0247,The app crashes every time I try to upload a file larger than 10 MB. Please reply soon.,Technical,Technical,Chat,Enterprise,English
+EM-0248,"Mera subscription do baar charge ho gaya, extra paisa refund kar do please.",Billing,Billing,Chat,Enterprise,Hinglish
+EM-0249,"Bill mein late fee kyun lagi hai, maine time pe payment kiya tha.",Billing,Account,Email,Pro,Hinglish
+EM-0250,Can you explain the late fee added to my last bill? Order ref 26523.,Billing,Billing,Email,Enterprise,English
+EM-0251,Export to CSV produces an empty file even though the table has data. Please reply soon.,Technical,Technical,Chat,Pro,English
+EM-0252,"I cannot connect to the dashboard since the update, it keeps loading forever. Please reply soon.",Technical,Technical,Email,Free,English
+EM-0253,Someone logged into my account from another country and changed my payout details. Please reply soon.,Fraud,Account,Chat,Pro,English
+EM-0254,The app crashes every time I try to upload a file larger than 10 MB.,Technical,Technical,Chat,Enterprise,English
+EM-0255,Do you have an office in Bengaluru where I can visit?,General,General,Chat,Enterprise,English
+EM-0256,"I cannot connect to the dashboard since the update, it keeps loading forever.",Technical,Technical,Email,Enterprise,English
+EM-0257,"I cannot connect to the dashboard since the update, it keeps loading forever.",Technical,Technical,Web form,Pro,English
+EM-0258,I want to add a second admin user to our team workspace.,Account,Account,Web form,Enterprise,English
+EM-0259,My invoice shows a higher amount than the plan I selected during signup. Please reply soon.,Billing,Billing,Email,Enterprise,English
+EM-0260,charged twice??,Billing,Billing,Chat,Free,English
+EM-0261,change email,Account,Account,Chat,Enterprise,English
+EM-0262,The app crashes every time I try to upload a file larger than 10 MB.,Technical,Technical,Chat,Free,English
+EM-0263,Someone logged into my account from another country and changed my payout details. Thanks.,Fraud,Account,Email,Pro,English
+EM-0264,How do I reset my password? The reset link expired. Order ref 79189.,Account,Account,Email,Free,English
+EM-0265,not loading,Technical,Technical,Web form,Enterprise,English
+EM-0266,Can you explain the late fee added to my last bill? Thanks.,Billing,Billing,Chat,Free,English
+EM-0267,App baar baar crash ho raha hai jab main file upload karta hoon. Thanks.,Technical,Technical,Email,Free,Hinglish
+EM-0268,"I cannot connect to the dashboard since the update, it keeps loading forever. Please reply soon.",Technical,Technical,Web form,Pro,English
+EM-0269,I want to add a second admin user to our team workspace.,Account,Account,Chat,Enterprise,English
+EM-0270,not loading,Technical,General,Web form,Pro,English
+EM-0271,Export to CSV produces an empty file even though the table has data.,Technical,Technical,Web form,Pro,English
+EM-0272,What are your support hours during public holidays?,General,General,Web form,Pro,English
+EM-0273,My invoice shows a higher amount than the plan I selected during signup. Thanks.,Billing,Billing,Email,Pro,English
+EM-0274,What are your support hours during public holidays? Order ref 21131.,General,General,Chat,Enterprise,English
+EM-0275,not loading,Technical,General,Web form,Pro,English
+EM-0276,app broken,Technical,Technical,Chat,Free,English
+EM-0277,Export to CSV produces an empty file even though the table has data.,Technical,Technical,Chat,Pro,English
+EM-0278,Can you explain the late fee added to my last bill?,Billing,Billing,Email,Free,English
+EM-0279,"I cannot connect to the dashboard since the update, it keeps loading forever. Thanks.",Technical,Technical,Email,Free,English
+EM-0280,Export to CSV produces an empty file even though the table has data. Thanks.,Technical,Technical,Email,Free,English
+EM-0281,"Mera subscription do baar charge ho gaya, extra paisa refund kar do please.",Billing,Account,Email,Free,Hinglish
+EM-0282,Please help me change the email address linked to my account.,Account,Account,Web form,Pro,English
+EM-0283,My invoice shows a higher amount than the plan I selected during signup.,Billing,Billing,Chat,Enterprise,English
+EM-0284,"Mera subscription do baar charge ho gaya, extra paisa refund kar do please.",Billing,Account,Email,Enterprise,Hinglish
+EM-0285,I want to add a second admin user to our team workspace. Thanks.,Account,Account,Email,Enterprise,English
+EM-0286,Please help me change the email address linked to my account.,Account,Account,Chat,Enterprise,English
+EM-0287,"There are transactions on my account that I did not make, please freeze it. Please reply soon.",Fraud,Fraud,Chat,Enterprise,English
+EM-0288,"I cannot connect to the dashboard since the update, it keeps loading forever.",Technical,Technical,Email,Pro,English
+EM-0289,"Mujhe apne account ka email change karna hai, kaise karun? Thanks.",Account,Account,Email,Pro,Hinglish
+EM-0290,refund pls,Billing,Billing,Web form,Free,Hinglish
+EM-0291,The app crashes every time I try to upload a file larger than 10 MB.,Technical,Technical,Email,Free,English
+EM-0292,My invoice shows a higher amount than the plan I selected during signup.,Billing,Billing,Web form,Pro,English
+EM-0293,Can you explain the late fee added to my last bill? Please reply soon.,Billing,Billing,Web form,Enterprise,English
+EM-0294,"Password reset link expire ho gaya, naya link bhejo. Thanks.",Account,Technical,Chat,Enterprise,Hinglish
+EM-0295,My invoice shows a higher amount than the plan I selected during signup. Thanks.,Billing,Billing,Chat,Pro,English
+EM-0296,"Mujhe apne account ka email change karna hai, kaise karun? Please reply soon.",Account,Technical,Email,Enterprise,Hinglish
+EM-0297,"I received an email asking for my card PIN that claims to be from you, is this real?",Fraud,Account,Chat,Enterprise,English
+EM-0298,How do I reset my password? The reset link expired.,Account,Account,Chat,Enterprise,English
+EM-0299,"I was charged twice for my subscription this month, please refund the extra amount. Please reply soon.",Billing,Billing,Email,Enterprise,English
+EM-0300,"I was charged twice for my subscription this month, please refund the extra amount. Order ref 29313.",Billing,Account,Web form,Pro,English
+EM-0301,Export to CSV produces an empty file even though the table has data.,Technical,Technical,Email,Pro,English
+EM-0302,reset password,Account,Account,Web form,Free,English
+EM-0303,Export to CSV produces an empty file even though the table has data.,Technical,Technical,Chat,Free,English
+EM-0304,How do I reset my password? The reset link expired. Order ref 58610.,Account,Account,Chat,Free,English
+EM-0305,Do you have an office in Bengaluru where I can visit?,General,General,Chat,Free,English
+EM-0306,Is there a student discount for your annual plan?,General,General,Chat,Enterprise,English
+EM-0307,"Bill mein late fee kyun lagi hai, maine time pe payment kiya tha. Please reply soon.",Billing,Billing,Email,Enterprise,Hinglish
+EM-0308,Can you explain the late fee added to my last bill?,Billing,Billing,Web form,Free,English
+EM-0309,"I cannot connect to the dashboard since the update, it keeps loading forever. Thanks.",Technical,Technical,Web form,Enterprise,English
+EM-0310,The app crashes every time I try to upload a file larger than 10 MB. Please reply soon.,Technical,Technical,Email,Pro,English
+EM-0311,Can you explain the late fee added to my last bill?,Billing,Billing,Web form,Enterprise,English
+EM-0312,I want to add a second admin user to our team workspace. Thanks.,Account,Account,Web form,Enterprise,English
+EM-0313,app broken,Technical,Technical,Chat,Enterprise,English
+EM-0314,Can you explain the late fee added to my last bill?,Billing,Billing,Chat,Free,English
+EM-0315,discount?,General,Billing,Chat,Pro,English
+EM-0316,What are your support hours during public holidays? Order ref 30094.,General,General,Web form,Free,English
+EM-0317,Export to CSV produces an empty file even though the table has data.,Technical,Technical,Chat,Free,English
+EM-0318,Can you explain the late fee added to my last bill?,Billing,Billing,Web form,Free,English
+EM-0319,I want to add a second admin user to our team workspace.,Account,Account,Chat,Pro,English
+EM-0320,Export to CSV produces an empty file even though the table has data.,Technical,Technical,Chat,Free,English
+EM-0321,How do I reset my password? The reset link expired. Order ref 47110.,Account,Account,Chat,Pro,English
+EM-0322,Someone logged into my account from another country and changed my payout details. Order ref 43561.,Fraud,Account,Chat,Free,English
+EM-0323,"I cannot connect to the dashboard since the update, it keeps loading forever. Please reply soon.",Technical,Technical,Web form,Pro,English
+EM-0324,Is there a student discount for your annual plan?,General,General,Chat,Enterprise,English
+EM-0325,Export to CSV produces an empty file even though the table has data. Order ref 28134.,Technical,Technical,Web form,Pro,English
+EM-0326,How do I reset my password? The reset link expired.,Account,Account,Chat,Enterprise,English
+EM-0327,My invoice shows a higher amount than the plan I selected during signup. Please reply soon.,Billing,Billing,Web form,Pro,English
+EM-0328,"I was charged twice for my subscription this month, please refund the extra amount.",Billing,Billing,Web form,Free,English
+EM-0329,discount?,General,General,Email,Free,English
+EM-0330,Do you have an office in Bengaluru where I can visit? Please reply soon.,General,General,Chat,Free,English
+EM-0331,How do I reset my password? The reset link expired. Thanks.,Account,Account,Email,Enterprise,English
+EM-0332,"Mere account pe aise transactions hain jo maine nahi kiye, turant block karo.",Fraud,Account,Web form,Pro,Hinglish
+EM-0333,"I was charged twice for my subscription this month, please refund the extra amount.",Billing,Billing,Web form,Pro,English
+EM-0334,My invoice shows a higher amount than the plan I selected during signup. Please reply soon.,Billing,Billing,Email,Enterprise,English
+EM-0335,How do I reset my password? The reset link expired. Order ref 24088.,Account,Account,Web form,Enterprise,English
+EM-0336,reset password,Account,Account,Web form,Pro,English
+EM-0337,I want to add a second admin user to our team workspace.,Account,Account,Chat,Enterprise,English
+EM-0338,Someone logged into my account from another country and changed my payout details.,Fraud,Fraud,Web form,Free,English
+EM-0339,App baar baar crash ho raha hai jab main file upload karta hoon. Thanks.,Technical,General,Web form,Pro,Hinglish
+EM-0340,The app crashes every time I try to upload a file larger than 10 MB.,Technical,Technical,Email,Pro,English
+EM-0341,"I was charged twice for my subscription this month, please refund the extra amount. Please reply soon.",Billing,Billing,Email,Enterprise,English
+EM-0342,"I cannot connect to the dashboard since the update, it keeps loading forever. Order ref 96871.",Technical,Technical,Chat,Pro,English
+EM-0343,"I was charged twice for my subscription this month, please refund the extra amount.",Billing,Billing,Chat,Free,English
+EM-0344,Someone logged into my account from another country and changed my payout details.,Fraud,Fraud,Chat,Free,English
+EM-0345,not loading,Technical,General,Chat,Pro,English
+EM-0346,not loading,Technical,Technical,Web form,Enterprise,English
+EM-0347,"I was charged twice for my subscription this month, please refund the extra amount. Thanks.",Billing,Billing,Chat,Free,English
+EM-0348,Please help me change the email address linked to my account. Order ref 54478.,Account,Account,Web form,Pro,English
+EM-0349,refund pls,Billing,Billing,Chat,Pro,English
+EM-0350,Please help me change the email address linked to my account.,Account,Account,Web form,Enterprise,English
+EM-0351,app broken,Technical,Technical,Chat,Free,English
+EM-0352,My invoice shows a higher amount than the plan I selected during signup.,Billing,Billing,Web form,Pro,English
+EM-0353,refund pls,Billing,Billing,Chat,Free,English
+EM-0354,Do you have an office in Bengaluru where I can visit?,General,General,Email,Enterprise,English
+EM-0355,"I cannot connect to the dashboard since the update, it keeps loading forever.",Technical,Technical,Chat,Pro,English
+EM-0356,"I cannot connect to the dashboard since the update, it keeps loading forever. Thanks.",Technical,General,Chat,Free,English
+EM-0357,Can you explain the late fee added to my last bill?,Billing,Billing,Email,Enterprise,English
+EM-0358,I want to add a second admin user to our team workspace. Order ref 76024.,Account,Account,Web form,Enterprise,English
+EM-0359,"Bill mein late fee kyun lagi hai, maine time pe payment kiya tha.",Billing,Account,Email,Enterprise,Hinglish
+EM-0360,charged twice??,Billing,Billing,Web form,Enterprise,English
+EM-0361,"I was charged twice for my subscription this month, please refund the extra amount.",Billing,Billing,Email,Free,English
+EM-0362,"Mujhe apne account ka email change karna hai, kaise karun?",Account,Technical,Chat,Enterprise,Hinglish
+EM-0363,App baar baar crash ho raha hai jab main file upload karta hoon. Thanks.,Technical,General,Email,Enterprise,Hinglish
+EM-0364,Kisi ne mere account mein login karke payout details badal di hain.,Fraud,Account,Email,Pro,Hinglish
+EM-0365,reset password,Account,Account,Chat,Pro,English
+EM-0366,Export to CSV produces an empty file even though the table has data.,Technical,Technical,Chat,Free,English
+EM-0367,App baar baar crash ho raha hai jab main file upload karta hoon.,Technical,General,Email,Enterprise,Hinglish
+EM-0368,Can you explain the late fee added to my last bill?,Billing,Billing,Email,Free,English
+EM-0369,"I was charged twice for my subscription this month, please refund the extra amount.",Billing,Billing,Web form,Enterprise,English
+EM-0370,Can you explain the late fee added to my last bill? Please reply soon.,Billing,Billing,Web form,Enterprise,English
+EM-0371,Export to CSV produces an empty file even though the table has data.,Technical,Technical,Web form,Free,English
+EM-0372,Can you explain the late fee added to my last bill?,Billing,Billing,Chat,Pro,English
+EM-0373,"I was charged twice for my subscription this month, please refund the extra amount. Please reply soon.",Billing,Billing,Email,Enterprise,English
+EM-0374,Can you explain the late fee added to my last bill?,Billing,Billing,Email,Pro,English
+EM-0375,reset password,Account,Account,Web form,Free,English
+EM-0376,My invoice shows a higher amount than the plan I selected during signup.,Billing,Billing,Chat,Pro,English
+EM-0377,Please help me change the email address linked to my account.,Account,Account,Email,Pro,English
+EM-0378,Export to CSV produces an empty file even though the table has data.,Technical,Technical,Chat,Free,English
+EM-0379,"I cannot connect to the dashboard since the update, it keeps loading forever.",Technical,Technical,Chat,Enterprise,English
+EM-0380,"I was charged twice for my subscription this month, please refund the extra amount. Please reply soon.",Billing,Billing,Web form,Pro,English
+EM-0381,reset password,Account,Account,Web form,Enterprise,English
+EM-0382,reset password,Account,Account,Chat,Free,Hinglish
+EM-0383,Export to CSV produces an empty file even though the table has data. Thanks.,Technical,Technical,Chat,Free,English
+EM-0384,I want to add a second admin user to our team workspace.,Account,Account,Chat,Free,English
+EM-0385,"I was charged twice for my subscription this month, please refund the extra amount. Please reply soon.",Billing,Billing,Web form,Enterprise,English
+EM-0386,discount?,General,General,Email,Enterprise,English
+EM-0387,"I cannot connect to the dashboard since the update, it keeps loading forever. Order ref 31946.",Technical,Technical,Email,Pro,English
+EM-0388,App baar baar crash ho raha hai jab main file upload karta hoon.,Technical,Technical,Chat,Free,Hinglish
+EM-0389,charged twice??,Billing,Fraud,Chat,Enterprise,Hinglish
+EM-0390,Do you have an office in Bengaluru where I can visit? Order ref 56194.,General,General,Chat,Free,English
+EM-0391,The app crashes every time I try to upload a file larger than 10 MB. Order ref 65057.,Technical,Technical,Web form,Enterprise,English
+EM-0392,not my transaction,Fraud,Account,Email,Pro,English
+EM-0393,Is there a student discount for your annual plan? Thanks.,General,General,Email,Enterprise,English
+EM-0394,"Mera subscription do baar charge ho gaya, extra paisa refund kar do please.",Billing,Billing,Chat,Pro,Hinglish
+EM-0395,Do you have an office in Bengaluru where I can visit?,General,General,Chat,Free,English
+EM-0396,"I cannot connect to the dashboard since the update, it keeps loading forever.",Technical,Technical,Web form,Free,English
+EM-0397,App baar baar crash ho raha hai jab main file upload karta hoon. Please reply soon.,Technical,Technical,Chat,Enterprise,Hinglish
+EM-0398,Do you have an office in Bengaluru where I can visit? Please reply soon.,General,General,Web form,Free,English
+EM-0399,"I cannot connect to the dashboard since the update, it keeps loading forever.",Technical,Technical,Email,Pro,English
+EM-0400,"I cannot connect to the dashboard since the update, it keeps loading forever.",Technical,Technical,Chat,Pro,English
+EM-0401,Someone logged into my account from another country and changed my payout details. Order ref 83406.,Fraud,Fraud,Email,Pro,English
+EM-0402,Please help me change the email address linked to my account.,Account,Account,Email,Free,English
+EM-0403,"Mera subscription do baar charge ho gaya, extra paisa refund kar do please.",Billing,Account,Email,Free,Hinglish
+EM-0404,"Mere account pe aise transactions hain jo maine nahi kiye, turant block karo.",Fraud,Fraud,Email,Free,Hinglish
+EM-0405,not loading,Technical,General,Email,Free,English
+EM-0406,"Password reset link expire ho gaya, naya link bhejo.",Account,Technical,Web form,Free,Hinglish
+EM-0407,"Password reset link expire ho gaya, naya link bhejo. Please reply soon.",Account,Account,Chat,Pro,Hinglish
+EM-0408,"I received an email asking for my card PIN that claims to be from you, is this real?",Fraud,Account,Chat,Enterprise,English
+EM-0409,"Password reset link expire ho gaya, naya link bhejo.",Account,Account,Chat,Enterprise,Hinglish
+EM-0410,"I cannot connect to the dashboard since the update, it keeps loading forever.",Technical,Technical,Email,Pro,English
+EM-0411,charged twice??,Billing,Account,Web form,Enterprise,English
+EM-0412,Please help me change the email address linked to my account. Order ref 43824.,Account,Account,Web form,Free,English
+EM-0413,How do I reset my password? The reset link expired.,Account,Account,Chat,Free,English
+EM-0414,Student discount milta hai kya annual plan pe?,General,General,Web form,Pro,Hinglish
+EM-0415,"Mujhe apne account ka email change karna hai, kaise karun?",Account,Account,Chat,Free,Hinglish
+EM-0416,My invoice shows a higher amount than the plan I selected during signup.,Billing,Billing,Email,Enterprise,English
+EM-0417,"There are transactions on my account that I did not make, please freeze it.",Fraud,Account,Email,Enterprise,English
+EM-0418,My invoice shows a higher amount than the plan I selected during signup.,Billing,Billing,Email,Free,English
+EM-0419,My invoice shows a higher amount than the plan I selected during signup. Order ref 17888.,Billing,Billing,Email,Pro,English
+EM-0420,I want to add a second admin user to our team workspace.,Account,Account,Email,Enterprise,English
+EM-0421,How do I reset my password? The reset link expired.,Account,Account,Email,Free,English
+EM-0422,My invoice shows a higher amount than the plan I selected during signup. Thanks.,Billing,Billing,Chat,Enterprise,English
+EM-0423,Someone logged into my account from another country and changed my payout details.,Fraud,Fraud,Email,Pro,English
+EM-0424,Someone logged into my account from another country and changed my payout details.,Fraud,Account,Web form,Free,English
+EM-0425,Can you explain the late fee added to my last bill?,Billing,Billing,Chat,Pro,English
+EM-0426,"Mera subscription do baar charge ho gaya, extra paisa refund kar do please.",Billing,Account,Web form,Enterprise,Hinglish
+EM-0427,App baar baar crash ho raha hai jab main file upload karta hoon.,Technical,Technical,Web form,Pro,Hinglish
+EM-0428,Someone logged into my account from another country and changed my payout details.,Fraud,Fraud,Web form,Pro,English
+EM-0429,"Password reset link expire ho gaya, naya link bhejo. Please reply soon.",Account,Account,Email,Pro,Hinglish
+EM-0430,The app crashes every time I try to upload a file larger than 10 MB.,Technical,Technical,Email,Pro,English
+EM-0431,Please help me change the email address linked to my account. Order ref 78859.,Account,Account,Email,Free,English
+EM-0432,Please help me change the email address linked to my account.,Account,Account,Web form,Free,English
+EM-0433,charged twice??,Billing,Billing,Email,Pro,English
+EM-0434,Can you explain the late fee added to my last bill?,Billing,Billing,Web form,Pro,English
+EM-0435,The app crashes every time I try to upload a file larger than 10 MB.,Technical,Technical,Web form,Enterprise,English
+EM-0436,not loading,Technical,Technical,Chat,Enterprise,English
+EM-0437,Export to CSV produces an empty file even though the table has data. Please reply soon.,Technical,Technical,Email,Pro,English
+EM-0438,The app crashes every time I try to upload a file larger than 10 MB. Thanks.,Technical,Technical,Web form,Pro,English
+EM-0439,Aapka office Bengaluru mein hai kya? Visit karna tha.,General,General,Email,Enterprise,Hinglish
+EM-0440,"I was charged twice for my subscription this month, please refund the extra amount. Thanks.",Billing,Billing,Web form,Enterprise,English
+EM-0441,The app crashes every time I try to upload a file larger than 10 MB.,Technical,Technical,Chat,Pro,English
+EM-0442,"I was charged twice for my subscription this month, please refund the extra amount. Please reply soon.",Billing,Billing,Email,Free,English
+EM-0443,"I was charged twice for my subscription this month, please refund the extra amount.",Billing,Billing,Email,Pro,English
+EM-0444,Do you have an office in Bengaluru where I can visit?,General,General,Web form,Free,English
+EM-0445,The app crashes every time I try to upload a file larger than 10 MB.,Technical,Technical,Chat,Enterprise,English
+EM-0446,Do you have an office in Bengaluru where I can visit?,General,General,Email,Free,English
+EM-0447,The app crashes every time I try to upload a file larger than 10 MB.,Technical,Technical,Web form,Free,English
+EM-0448,"I was charged twice for my subscription this month, please refund the extra amount.",Billing,Billing,Email,Free,English
+EM-0449,I want to add a second admin user to our team workspace.,Account,Account,Web form,Free,English
+EM-0450,I want to add a second admin user to our team workspace. Please reply soon.,Account,Account,Email,Free,English
+EM-0451,Export to CSV produces an empty file even though the table has data.,Technical,Technical,Chat,Enterprise,English
+EM-0452,office hours?,General,General,Chat,Pro,English
+EM-0453,"Update ke baad dashboard khul hi nahi raha, sirf loading dikh raha hai.",Technical,Technical,Web form,Pro,Hinglish
+EM-0454,"Password reset link expire ho gaya, naya link bhejo. Please reply soon.",Account,Technical,Web form,Enterprise,Hinglish
+EM-0455,Export to CSV produces an empty file even though the table has data. Order ref 75395.,Technical,Technical,Chat,Enterprise,English
+EM-0456,Someone logged into my account from another country and changed my payout details.,Fraud,Account,Email,Enterprise,English
+EM-0457,reset password,Account,Technical,Chat,Enterprise,English
+EM-0458,Someone logged into my account from another country and changed my payout details. Please reply soon.,Fraud,Account,Email,Free,English
+EM-0459,Do you have an office in Bengaluru where I can visit? Order ref 72437.,General,General,Web form,Enterprise,English
+EM-0460,App baar baar crash ho raha hai jab main file upload karta hoon.,Technical,Technical,Chat,Enterprise,Hinglish
+EM-0461,Export to CSV produces an empty file even though the table has data. Please reply soon.,Technical,Technical,Chat,Free,English
+EM-0462,Export to CSV produces an empty file even though the table has data.,Technical,Technical,Email,Pro,English
+EM-0463,The app crashes every time I try to upload a file larger than 10 MB. Please reply soon.,Technical,Technical,Web form,Free,English
+EM-0464,Can you explain the late fee added to my last bill?,Billing,Billing,Email,Pro,English
+EM-0465,"Bill mein late fee kyun lagi hai, maine time pe payment kiya tha.",Billing,Account,Web form,Free,Hinglish
+EM-0466,charged twice??,Billing,Billing,Chat,Pro,English
+EM-0467,Is there a student discount for your annual plan?,General,General,Web form,Free,English
+EM-0468,"I was charged twice for my subscription this month, please refund the extra amount.",Billing,Billing,Email,Free,English
+EM-0469,How do I reset my password? The reset link expired.,Account,Account,Chat,Pro,English
+EM-0470,Please help me change the email address linked to my account. Please reply soon.,Account,Account,Email,Pro,English
+EM-0471,Can you explain the late fee added to my last bill? Thanks.,Billing,Billing,Chat,Enterprise,English
+EM-0472,App baar baar crash ho raha hai jab main file upload karta hoon.,Technical,Technical,Email,Pro,Hinglish
+EM-0473,My invoice shows a higher amount than the plan I selected during signup.,Billing,Billing,Web form,Enterprise,English
+EM-0474,My invoice shows a higher amount than the plan I selected during signup. Please reply soon.,Billing,Billing,Email,Pro,English
+EM-0475,"I cannot connect to the dashboard since the update, it keeps loading forever. Please reply soon.",Technical,Technical,Web form,Pro,English
+EM-0476,Kisi ne mere account mein login karke payout details badal di hain.,Fraud,Fraud,Email,Enterprise,Hinglish
+EM-0477,"I was charged twice for my subscription this month, please refund the extra amount. Order ref 90820.",Billing,Billing,Email,Enterprise,English
+EM-0478,Can you explain the late fee added to my last bill? Thanks.,Billing,Billing,Chat,Free,English
+EM-0479,Kisi ne mere account mein login karke payout details badal di hain.,Fraud,Account,Email,Free,Hinglish
+EM-0480,My invoice shows a higher amount than the plan I selected during signup. Thanks.,Billing,Billing,Chat,Enterprise,English
+EM-0481,What are your support hours during public holidays?,General,General,Web form,Pro,English
+EM-0482,My invoice shows a higher amount than the plan I selected during signup. Please reply soon.,Billing,Billing,Web form,Free,English
+EM-0483,Someone logged into my account from another country and changed my payout details.,Fraud,Fraud,Chat,Free,English
+EM-0484,"I was charged twice for my subscription this month, please refund the extra amount.",Billing,Billing,Email,Free,English
+EM-0485,My invoice shows a higher amount than the plan I selected during signup. Please reply soon.,Billing,Billing,Chat,Pro,English
+EM-0486,Export to CSV produces an empty file even though the table has data.,Technical,Technical,Email,Enterprise,English
+EM-0487,"Mere account pe aise transactions hain jo maine nahi kiye, turant block karo.",Fraud,Fraud,Chat,Free,Hinglish
+EM-0488,How do I reset my password? The reset link expired.,Account,Account,Web form,Enterprise,English
+EM-0489,My invoice shows a higher amount than the plan I selected during signup.,Billing,Billing,Web form,Pro,English
+EM-0490,I want to add a second admin user to our team workspace.,Account,Account,Chat,Free,English
+EM-0491,"I cannot connect to the dashboard since the update, it keeps loading forever. Order ref 19131.",Technical,Technical,Web form,Pro,English
+EM-0492,"Mujhe apne account ka email change karna hai, kaise karun? Please reply soon.",Account,Account,Chat,Enterprise,Hinglish
+EM-0493,What are your support hours during public holidays? Please reply soon.,General,General,Chat,Enterprise,English
+EM-0494,reset password,Account,Account,Chat,Pro,English
+EM-0495,Please help me change the email address linked to my account.,Account,Account,Web form,Enterprise,English
+EM-0496,Please help me change the email address linked to my account. Thanks.,Account,Account,Chat,Pro,English
+EM-0497,"There are transactions on my account that I did not make, please freeze it.",Fraud,Fraud,Chat,Pro,English
+EM-0498,What are your support hours during public holidays? Thanks.,General,General,Chat,Free,English
+EM-0499,refund pls,Billing,Account,Chat,Pro,English
+EM-0500,My invoice shows a higher amount than the plan I selected during signup. Order ref 96721.,Billing,Billing,Chat,Pro,English
+EM-0501,How do I reset my password? The reset link expired.,Account,Account,Web form,Pro,English
+EM-0502,The app crashes every time I try to upload a file larger than 10 MB.,Technical,Technical,Email,Enterprise,English
+EM-0503,"Password reset link expire ho gaya, naya link bhejo. Thanks.",Account,Technical,Email,Enterprise,Hinglish
+EM-0504,discount?,General,Billing,Email,Pro,English
+EM-0505,"Password reset link expire ho gaya, naya link bhejo. Please reply soon.",Account,Technical,Web form,Free,Hinglish
+EM-0506,Can you explain the late fee added to my last bill?,Billing,Billing,Email,Free,English
+EM-0507,The app crashes every time I try to upload a file larger than 10 MB. Please reply soon.,Technical,Technical,Chat,Pro,English
+EM-0508,Aapka office Bengaluru mein hai kya? Visit karna tha.,General,General,Chat,Pro,Hinglish
+EM-0509,"I cannot connect to the dashboard since the update, it keeps loading forever.",Technical,Technical,Email,Enterprise,English
+EM-0510,Do you have an office in Bengaluru where I can visit?,General,General,Chat,Enterprise,English
+EM-0511,App baar baar crash ho raha hai jab main file upload karta hoon.,Technical,Technical,Web form,Free,Hinglish
+EM-0512,reset password,Account,General,Email,Pro,English
+EM-0513,"I was charged twice for my subscription this month, please refund the extra amount.",Billing,Billing,Web form,Enterprise,English
+EM-0514,"Mujhe apne account ka email change karna hai, kaise karun? Thanks.",Account,Technical,Chat,Pro,Hinglish
+EM-0515,Is there a student discount for your annual plan?,General,General,Web form,Enterprise,English
+EM-0516,"I was charged twice for my subscription this month, please refund the extra amount. Order ref 65072.",Billing,Billing,Email,Pro,English
+EM-0517,The app crashes every time I try to upload a file larger than 10 MB.,Technical,Technical,Email,Pro,English
+EM-0518,"Mera subscription do baar charge ho gaya, extra paisa refund kar do please. Please reply soon.",Billing,Billing,Chat,Pro,Hinglish
+EM-0519,The app crashes every time I try to upload a file larger than 10 MB.,Technical,Technical,Chat,Enterprise,English
+EM-0520,Is there a student discount for your annual plan? Thanks.,General,General,Chat,Free,English
+EM-0521,What are your support hours during public holidays?,General,General,Web form,Enterprise,English
+EM-0522,I want to add a second admin user to our team workspace. Please reply soon.,Account,Account,Web form,Enterprise,English
+EM-0523,"Update ke baad dashboard khul hi nahi raha, sirf loading dikh raha hai.",Technical,General,Email,Free,Hinglish
+EM-0524,"I cannot connect to the dashboard since the update, it keeps loading forever. Thanks.",Technical,Technical,Chat,Free,English
+EM-0525,not loading,Technical,Fraud,Web form,Free,English
+EM-0526,My invoice shows a higher amount than the plan I selected during signup. Thanks.,Billing,Billing,Email,Enterprise,English
+EM-0527,"I cannot connect to the dashboard since the update, it keeps loading forever.",Technical,Technical,Web form,Pro,English
+EM-0528,The app crashes every time I try to upload a file larger than 10 MB. Thanks.,Technical,Technical,Web form,Pro,English
+EM-0529,"I cannot connect to the dashboard since the update, it keeps loading forever.",Technical,Technical,Chat,Pro,English
+EM-0530,"Mera subscription do baar charge ho gaya, extra paisa refund kar do please.",Billing,Billing,Chat,Free,Hinglish
+EM-0531,not loading,Technical,General,Web form,Enterprise,English
+EM-0532,The app crashes every time I try to upload a file larger than 10 MB.,Technical,Technical,Web form,Pro,English
+EM-0533,"Update ke baad dashboard khul hi nahi raha, sirf loading dikh raha hai. Order ref 74305.",Technical,Technical,Chat,Pro,Hinglish
+EM-0534,My invoice shows a higher amount than the plan I selected during signup.,Billing,Billing,Chat,Pro,English
+EM-0535,The app crashes every time I try to upload a file larger than 10 MB.,Technical,Technical,Email,Pro,English
+EM-0536,My invoice shows a higher amount than the plan I selected during signup. Order ref 27734.,Billing,Billing,Email,Pro,English
+EM-0537,"Mujhe apne account ka email change karna hai, kaise karun? Thanks.",Account,Account,Web form,Enterprise,Hinglish
+EM-0538,Is there a student discount for your annual plan?,General,General,Email,Free,English
+EM-0539,Can you explain the late fee added to my last bill?,Billing,Billing,Chat,Pro,English
+EM-0540,reset password,Account,Account,Web form,Pro,English
+EM-0541,My invoice shows a higher amount than the plan I selected during signup.,Billing,Billing,Chat,Enterprise,English
+EM-0542,"Bill mein late fee kyun lagi hai, maine time pe payment kiya tha.",Billing,Account,Email,Free,Hinglish
+EM-0543,App baar baar crash ho raha hai jab main file upload karta hoon.,Technical,General,Web form,Enterprise,Hinglish
+EM-0544,The app crashes every time I try to upload a file larger than 10 MB.,Technical,Technical,Chat,Free,English
+EM-0545,reset password,Account,Account,Web form,Enterprise,English
+EM-0546,Do you have an office in Bengaluru where I can visit?,General,General,Email,Pro,English
+EM-0547,office hours?,General,Billing,Chat,Pro,English
+EM-0548,Can you explain the late fee added to my last bill?,Billing,Billing,Web form,Free,English
+EM-0549,What are your support hours during public holidays?,General,General,Web form,Pro,English
+EM-0550,Can you explain the late fee added to my last bill?,Billing,Billing,Web form,Enterprise,English
+EM-0551,"There are transactions on my account that I did not make, please freeze it.",Fraud,Account,Email,Pro,English
+EM-0552,"Update ke baad dashboard khul hi nahi raha, sirf loading dikh raha hai. Order ref 46371.",Technical,Technical,Web form,Enterprise,Hinglish
+EM-0553,"I cannot connect to the dashboard since the update, it keeps loading forever. Please reply soon.",Technical,Technical,Web form,Pro,English
+EM-0554,Can you explain the late fee added to my last bill?,Billing,Billing,Chat,Free,English
+EM-0555,refund pls,Billing,Billing,Chat,Pro,English
+EM-0556,app broken,Technical,General,Chat,Free,English
+EM-0557,"I received an email asking for my card PIN that claims to be from you, is this real? Order ref 91437.",Fraud,Fraud,Email,Enterprise,English
+EM-0558,Is there a student discount for your annual plan?,General,General,Web form,Free,English
+EM-0559,"I cannot connect to the dashboard since the update, it keeps loading forever.",Technical,Technical,Web form,Pro,English
+EM-0560,charged twice??,Billing,Billing,Email,Pro,English
+EM-0561,"I cannot connect to the dashboard since the update, it keeps loading forever. Please reply soon.",Technical,Technical,Web form,Pro,English
+EM-0562,Export to CSV produces an empty file even though the table has data. Thanks.,Technical,Technical,Email,Enterprise,English
+EM-0563,Is there a student discount for your annual plan?,General,Billing,Email,Enterprise,English
+EM-0564,The app crashes every time I try to upload a file larger than 10 MB. Thanks.,Technical,Technical,Email,Free,English
+EM-0565,Someone logged into my account from another country and changed my payout details.,Fraud,Fraud,Email,Pro,English
+EM-0566,The app crashes every time I try to upload a file larger than 10 MB. Order ref 91421.,Technical,Technical,Chat,Free,English
+EM-0567,reset password,Account,Technical,Web form,Enterprise,English
+EM-0568,"I was charged twice for my subscription this month, please refund the extra amount. Thanks.",Billing,Billing,Chat,Pro,English
+EM-0569,"Bill mein late fee kyun lagi hai, maine time pe payment kiya tha. Please reply soon.",Billing,Billing,Web form,Free,Hinglish
+EM-0570,App baar baar crash ho raha hai jab main file upload karta hoon. Order ref 61955.,Technical,Technical,Web form,Pro,Hinglish
+EM-0571,Export to CSV produces an empty file even though the table has data. Please reply soon.,Technical,Technical,Web form,Enterprise,English
+EM-0572,The app crashes every time I try to upload a file larger than 10 MB.,Technical,Technical,Chat,Pro,English
+EM-0573,"I cannot connect to the dashboard since the update, it keeps loading forever.",Technical,Technical,Chat,Free,English
+EM-0574,"I cannot connect to the dashboard since the update, it keeps loading forever. Order ref 78216.",Technical,Technical,Email,Free,English
+EM-0575,"There are transactions on my account that I did not make, please freeze it.",Fraud,Fraud,Chat,Pro,English
+EM-0576,How do I reset my password? The reset link expired. Thanks.,Account,General,Email,Free,English
+EM-0577,Please help me change the email address linked to my account. Thanks.,Account,Account,Email,Enterprise,English
+EM-0578,Can you explain the late fee added to my last bill? Thanks.,Billing,Billing,Web form,Enterprise,English
+EM-0579,How do I reset my password? The reset link expired.,Account,Account,Email,Pro,English
+EM-0580,"I was charged twice for my subscription this month, please refund the extra amount. Please reply soon.",Billing,Billing,Web form,Enterprise,English
+EM-0581,"I was charged twice for my subscription this month, please refund the extra amount. Order ref 96694.",Billing,Billing,Chat,Enterprise,English
+EM-0582,"I was charged twice for my subscription this month, please refund the extra amount. Thanks.",Billing,Billing,Web form,Enterprise,English
+EM-0583,"Mere account pe aise transactions hain jo maine nahi kiye, turant block karo. Please reply soon.",Fraud,Fraud,Web form,Free,Hinglish
+EM-0584,I want to add a second admin user to our team workspace. Thanks.,Account,Account,Web form,Free,English
+EM-0585,Can you explain the late fee added to my last bill? Please reply soon.,Billing,Billing,Web form,Pro,English
+EM-0586,charged twice??,Billing,Billing,Email,Enterprise,English
+EM-0587,"I received an email asking for my card PIN that claims to be from you, is this real?",Fraud,Account,Email,Pro,English
+EM-0588,The app crashes every time I try to upload a file larger than 10 MB.,Technical,Technical,Chat,Pro,English
+EM-0589,"I cannot connect to the dashboard since the update, it keeps loading forever. Please reply soon.",Technical,Technical,Chat,Free,English
+EM-0590,Export to CSV produces an empty file even though the table has data.,Technical,Technical,Web form,Free,English
+EM-0591,Someone logged into my account from another country and changed my payout details.,Fraud,Fraud,Chat,Pro,English
+EM-0592,Can you explain the late fee added to my last bill?,Billing,Billing,Web form,Pro,English
+EM-0593,"Mera subscription do baar charge ho gaya, extra paisa refund kar do please.",Billing,Account,Email,Pro,Hinglish
+EM-0594,"I was charged twice for my subscription this month, please refund the extra amount. Please reply soon.",Billing,Billing,Web form,Free,English
+EM-0595,"I cannot connect to the dashboard since the update, it keeps loading forever.",Technical,Technical,Web form,Pro,English
+EM-0596,"I was charged twice for my subscription this month, please refund the extra amount. Thanks.",Billing,Billing,Web form,Enterprise,English
+EM-0597,"I was charged twice for my subscription this month, please refund the extra amount. Please reply soon.",Billing,Billing,Email,Pro,English
+EM-0598,"Mujhe apne account ka email change karna hai, kaise karun? Thanks.",Account,Account,Email,Pro,Hinglish
+EM-0599,"I cannot connect to the dashboard since the update, it keeps loading forever. Please reply soon.",Technical,Technical,Chat,Enterprise,English
+EM-0600,"I cannot connect to the dashboard since the update, it keeps loading forever.",Technical,Technical,Email,Enterprise,English
+EM-0601,Can you explain the late fee added to my last bill? Thanks.,Billing,Billing,Web form,Pro,English
+EM-0602,My invoice shows a higher amount than the plan I selected during signup. Thanks.,Billing,Billing,Email,Pro,English
+EM-0603,Can you explain the late fee added to my last bill? Order ref 42086.,Billing,General,Web form,Free,English
+EM-0604,"There are transactions on my account that I did not make, please freeze it.",Fraud,Fraud,Web form,Enterprise,English
+EM-0605,The app crashes every time I try to upload a file larger than 10 MB.,Technical,Technical,Chat,Enterprise,English
+EM-0606,"I cannot connect to the dashboard since the update, it keeps loading forever.",Technical,Technical,Email,Free,English
+EM-0607,"I was charged twice for my subscription this month, please refund the extra amount. Thanks.",Billing,Billing,Web form,Free,English
+EM-0608,App baar baar crash ho raha hai jab main file upload karta hoon.,Technical,Technical,Email,Pro,Hinglish
+EM-0609,Do you have an office in Bengaluru where I can visit? Order ref 12636.,General,General,Email,Enterprise,English
+EM-0610,"Bill mein late fee kyun lagi hai, maine time pe payment kiya tha. Please reply soon.",Billing,Billing,Chat,Pro,Hinglish
+EM-0611,How do I reset my password? The reset link expired. Order ref 67448.,Account,Account,Chat,Pro,English
+EM-0612,Is there a student discount for your annual plan?,General,General,Web form,Pro,English
+EM-0613,App baar baar crash ho raha hai jab main file upload karta hoon. Order ref 72364.,Technical,Technical,Web form,Free,Hinglish
+EM-0614,The app crashes every time I try to upload a file larger than 10 MB.,Technical,Technical,Web form,Enterprise,English
+EM-0615,The app crashes every time I try to upload a file larger than 10 MB. Please reply soon.,Technical,Technical,Web form,Enterprise,English
+EM-0616,Can you explain the late fee added to my last bill? Thanks.,Billing,Billing,Email,Enterprise,English
+EM-0617,The app crashes every time I try to upload a file larger than 10 MB.,Technical,Technical,Web form,Enterprise,English
+EM-0618,Is there a student discount for your annual plan?,General,General,Chat,Free,English
+EM-0619,I want to add a second admin user to our team workspace.,Account,Account,Email,Pro,English
+EM-0620,Please help me change the email address linked to my account.,Account,Account,Web form,Pro,English
+EM-0621,"Bill mein late fee kyun lagi hai, maine time pe payment kiya tha.",Billing,Account,Email,Enterprise,Hinglish
+EM-0622,Do you have an office in Bengaluru where I can visit?,General,General,Web form,Free,English
+EM-0623,Please help me change the email address linked to my account.,Account,Account,Chat,Pro,English
+EM-0624,Can you explain the late fee added to my last bill?,Billing,Billing,Email,Enterprise,English
+EM-0625,My invoice shows a higher amount than the plan I selected during signup. Order ref 60478.,Billing,Billing,Web form,Free,English
+EM-0626,Do you have an office in Bengaluru where I can visit? Thanks.,General,General,Web form,Pro,English
+EM-0627,not loading,Technical,General,Web form,Pro,English
+EM-0628,"Update ke baad dashboard khul hi nahi raha, sirf loading dikh raha hai.",Technical,Technical,Email,Free,Hinglish
+EM-0629,My invoice shows a higher amount than the plan I selected during signup. Please reply soon.,Billing,Billing,Chat,Pro,English
+EM-0630,Is there a student discount for your annual plan? Order ref 58602.,General,General,Web form,Pro,English
+EM-0631,Please help me change the email address linked to my account. Order ref 91408.,Account,Account,Email,Enterprise,English
+EM-0632,Export to CSV produces an empty file even though the table has data.,Technical,Technical,Web form,Free,English
+EM-0633,"There are transactions on my account that I did not make, please freeze it. Please reply soon.",Fraud,Account,Chat,Pro,English
+EM-0634,The app crashes every time I try to upload a file larger than 10 MB.,Technical,Technical,Email,Pro,English
+EM-0635,"Mujhe apne account ka email change karna hai, kaise karun?",Account,Account,Email,Free,Hinglish
+EM-0636,"I was charged twice for my subscription this month, please refund the extra amount. Thanks.",Billing,Billing,Email,Free,English
+EM-0637,Export to CSV produces an empty file even though the table has data.,Technical,Technical,Chat,Free,English
+EM-0638,Kisi ne mere account mein login karke payout details badal di hain. Thanks.,Fraud,Account,Web form,Free,Hinglish
+EM-0639,What are your support hours during public holidays? Thanks.,General,General,Web form,Enterprise,English
+EM-0640,charged twice??,Billing,Billing,Chat,Free,English
+EM-0641,How do I reset my password? The reset link expired. Please reply soon.,Account,Account,Web form,Enterprise,English
+EM-0642,Someone logged into my account from another country and changed my payout details. Order ref 12067.,Fraud,Account,Email,Free,English
+EM-0643,"I was charged twice for my subscription this month, please refund the extra amount. Please reply soon.",Billing,Billing,Email,Free,English
+EM-0644,Is there a student discount for your annual plan?,General,General,Email,Pro,English
+EM-0645,Can you explain the late fee added to my last bill?,Billing,Billing,Chat,Pro,English
+EM-0646,Someone logged into my account from another country and changed my payout details.,Fraud,Account,Chat,Pro,English
+EM-0647,Please help me change the email address linked to my account. Thanks.,Account,Account,Web form,Enterprise,English
+EM-0648,charged twice??,Billing,Account,Chat,Pro,Hinglish
+EM-0649,Export to CSV produces an empty file even though the table has data. Order ref 77633.,Technical,Technical,Chat,Pro,English
+EM-0650,"Mera subscription do baar charge ho gaya, extra paisa refund kar do please. Thanks.",Billing,Billing,Web form,Free,Hinglish
+EM-0651,"Mere account pe aise transactions hain jo maine nahi kiye, turant block karo. Order ref 44480.",Fraud,Fraud,Chat,Free,Hinglish
+EM-0652,Student discount milta hai kya annual plan pe?,General,General,Chat,Enterprise,Hinglish
+EM-0653,not loading,Technical,Technical,Web form,Pro,English
+EM-0654,I want to add a second admin user to our team workspace.,Account,Account,Email,Pro,English
+EM-0655,"I was charged twice for my subscription this month, please refund the extra amount.",Billing,Billing,Email,Enterprise,English
+EM-0656,"I received an email asking for my card PIN that claims to be from you, is this real? Please reply soon.",Fraud,Fraud,Chat,Free,English
+EM-0657,My invoice shows a higher amount than the plan I selected during signup. Order ref 71298.,Billing,Billing,Email,Free,English
+EM-0658,"I received an email asking for my card PIN that claims to be from you, is this real? Please reply soon.",Fraud,Fraud,Email,Free,English
+EM-0659,Aapka office Bengaluru mein hai kya? Visit karna tha.,General,General,Chat,Free,Hinglish
+EM-0660,hacked!!,Fraud,Account,Chat,Enterprise,English
+EM-0661,"I was charged twice for my subscription this month, please refund the extra amount.",Billing,Billing,Email,Enterprise,English
+EM-0662,"Mera subscription do baar charge ho gaya, extra paisa refund kar do please. Please reply soon.",Billing,Billing,Web form,Enterprise,Hinglish
+EM-0663,Kisi ne mere account mein login karke payout details badal di hain. Please reply soon.,Fraud,Account,Web form,Free,Hinglish
+EM-0664,Is there a student discount for your annual plan? Please reply soon.,General,General,Chat,Enterprise,English
+EM-0665,The app crashes every time I try to upload a file larger than 10 MB.,Technical,Technical,Chat,Free,English
+EM-0666,"Bill mein late fee kyun lagi hai, maine time pe payment kiya tha.",Billing,Billing,Email,Free,Hinglish
+EM-0667,Can you explain the late fee added to my last bill? Order ref 28595.,Billing,Billing,Web form,Enterprise,English
+EM-0668,My invoice shows a higher amount than the plan I selected during signup. Thanks.,Billing,Billing,Email,Free,English
+EM-0669,How do I reset my password? The reset link expired. Order ref 78180.,Account,Account,Email,Free,English
+EM-0670,"Mere account pe aise transactions hain jo maine nahi kiye, turant block karo.",Fraud,Account,Chat,Pro,Hinglish
+EM-0671,change email,Account,Technical,Chat,Enterprise,English
+EM-0672,not my transaction,Fraud,Account,Email,Pro,English
+EM-0673,Please help me change the email address linked to my account.,Account,Account,Email,Free,English
+EM-0674,I want to add a second admin user to our team workspace. Order ref 40774.,Account,Account,Email,Enterprise,English
+EM-0675,Export to CSV produces an empty file even though the table has data.,Technical,General,Chat,Enterprise,English
+EM-0676,Please help me change the email address linked to my account.,Account,Account,Chat,Free,English
+EM-0677,Export to CSV produces an empty file even though the table has data.,Technical,Technical,Chat,Free,English
+EM-0678,"Mera subscription do baar charge ho gaya, extra paisa refund kar do please.",Billing,Account,Web form,Free,Hinglish
+EM-0679,The app crashes every time I try to upload a file larger than 10 MB.,Technical,Technical,Chat,Pro,English
+EM-0680,Please help me change the email address linked to my account. Order ref 47484.,Account,Account,Web form,Pro,English
+EM-0681,charged twice??,Billing,Billing,Email,Enterprise,English
+EM-0682,My invoice shows a higher amount than the plan I selected during signup. Order ref 61881.,Billing,Billing,Chat,Enterprise,English
+EM-0683,"I was charged twice for my subscription this month, please refund the extra amount. Please reply soon.",Billing,Billing,Email,Pro,English
+EM-0684,"Mera subscription do baar charge ho gaya, extra paisa refund kar do please. Order ref 96365.",Billing,Billing,Web form,Pro,Hinglish
+EM-0685,The app crashes every time I try to upload a file larger than 10 MB.,Technical,Technical,Web form,Free,English
+EM-0686,Is there a student discount for your annual plan?,General,General,Chat,Free,English
+EM-0687,"Mujhe apne account ka email change karna hai, kaise karun?",Account,Account,Email,Free,Hinglish
+EM-0688,Do you have an office in Bengaluru where I can visit? Order ref 74126.,General,General,Email,Free,English
+EM-0689,App baar baar crash ho raha hai jab main file upload karta hoon.,Technical,General,Email,Pro,Hinglish
+EM-0690,"I cannot connect to the dashboard since the update, it keeps loading forever.",Technical,Technical,Chat,Pro,English
+EM-0691,"I cannot connect to the dashboard since the update, it keeps loading forever.",Technical,Technical,Web form,Enterprise,English
+EM-0692,discount?,General,General,Web form,Enterprise,English
+EM-0693,Someone logged into my account from another country and changed my payout details.,Fraud,Fraud,Web form,Pro,English
+EM-0694,"Mere account pe aise transactions hain jo maine nahi kiye, turant block karo. Thanks.",Fraud,Fraud,Web form,Enterprise,Hinglish
+EM-0695,"Mera subscription do baar charge ho gaya, extra paisa refund kar do please. Order ref 62304.",Billing,Billing,Email,Free,Hinglish
+EM-0696,Export to CSV produces an empty file even though the table has data. Thanks.,Technical,Technical,Email,Free,English
+EM-0697,charged twice??,Billing,Billing,Web form,Enterprise,English
+EM-0698,"I was charged twice for my subscription this month, please refund the extra amount.",Billing,Billing,Email,Free,English
+EM-0699,"I received an email asking for my card PIN that claims to be from you, is this real? Please reply soon.",Fraud,Account,Email,Enterprise,English
+EM-0700,Please help me change the email address linked to my account. Please reply soon.,Account,Account,Email,Free,English

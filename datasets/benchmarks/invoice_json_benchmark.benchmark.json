@@ -1,0 +1,47 @@
+{
+  "name": "Invoice JSON extraction benchmark (synthetic)",
+  "synthetic": true,
+  "seed": 4417,
+  "records": 500,
+  "task": "json",
+  "planted_patterns": [
+    {
+      "id": "scanned",
+      "expected_detection": {
+        "feature": "source",
+        "op": "==",
+        "value": "Scan"
+      }
+    },
+    {
+      "id": "foreign_ccy",
+      "expected_detection": {
+        "feature": "number_mentions",
+        "op": "n/a",
+        "value": "currency is only visible in text"
+      }
+    },
+    {
+      "id": "multi_page",
+      "expected_detection": {
+        "feature": "pages",
+        "op": ">=",
+        "value": 2
+      }
+    }
+  ],
+  "dataset_file": "datasets/sample/invoice_json_benchmark.csv",
+  "labels_file": "datasets/benchmarks/invoice_json_benchmark.labels.csv",
+  "suggested_mapping": {
+    "input_column": "document_text",
+    "expected_column": "expected_json",
+    "actual_column": "model_json",
+    "case_id_column": "id",
+    "metadata_columns": [
+      "source",
+      "pages",
+      "vendor_region"
+    ]
+  },
+  "observed_error_rate": 0.296
+}
