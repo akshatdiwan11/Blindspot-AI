@@ -8,6 +8,21 @@ from sqlalchemy.orm import DeclarativeBase, Session, sessionmaker
 from app.core.config import get_settings
 
 
+def _register_numpy_adapters() -> None:
+    """Let psycopg2 store numpy scalars (the stats code returns them) as plain numbers."""
+    try:
+        import numpy as np
+        from psycopg2.extensions import AsIs, register_adapter
+    except ImportError:  # pragma: no cover - psycopg2 is optional for SQLite-only setups
+        return
+    for t in (np.float64, np.float32, np.int64, np.int32):
+        register_adapter(t, lambda v: AsIs(repr(v.item())))
+    register_adapter(np.bool_, lambda v: AsIs("TRUE" if bool(v) else "FALSE"))
+
+
+_register_numpy_adapters()
+
+
 class Base(DeclarativeBase):
     pass
 

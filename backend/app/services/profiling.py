@@ -116,6 +116,30 @@ def build_profile(columns: list[str], rows: list[dict[str, str | None]], invalid
     }
 
 
+def suggest_task(values: list[Any]) -> dict[str, str]:
+    """Guess the evaluation task from the expected outputs. Only a suggestion; the user decides."""
+    vals = [str(v).strip() for v in values if v is not None and str(v).strip()]
+    if not vals:
+        return {"task": "text", "reason": "No expected outputs to inspect."}
+    json_like = 0
+    for v in vals:
+        if v[:1] in "{[":
+            try:
+                json.loads(v)
+                json_like += 1
+            except ValueError:
+                pass
+    if json_like / len(vals) >= 0.8:
+        return {"task": "json", "reason": f"{json_like} of {len(vals)} expected outputs are valid JSON."}
+    distinct = len(set(vals))
+    avg_words = sum(len(v.split()) for v in vals) / len(vals)
+    if len(vals) >= 10 and distinct <= min(30, max(2, int(0.2 * len(vals)))) and avg_words <= 4:
+        return {"task": "classification", "reason": f"Expected outputs use only {distinct} distinct short labels."}
+    if json_like == 0:
+        return {"task": "text", "reason": "Expected outputs are free text, not JSON or a small set of labels."}
+    return {"task": "text", "reason": f"Only {json_like} of {len(vals)} expected outputs are valid JSON."}
+
+
 def validate_mapping_against(rows: list[dict[str, str | None]], mapping: dict[str, Any]) -> dict[str, Any]:
     """Row-level checks once the user has mapped columns."""
     exp, act, inp, cid = mapping["expected_column"], mapping["actual_column"], mapping.get("input_column"), mapping.get("case_id_column")
@@ -147,4 +171,5 @@ def validate_mapping_against(rows: list[dict[str, str | None]], mapping: dict[st
         "duplicate_case_ids": len(dup_ids),
         "leaky_metadata_columns": leaks,
         "warnings": warnings,
+        "suggested_task": suggest_task([r.get(exp) for r in rows[:2000]]),
     }

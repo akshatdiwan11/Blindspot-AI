@@ -20,8 +20,18 @@ def load_demo(db: Session, key: str) -> tuple[Project, EvaluationRun]:
                       evaluation_task=spec.task, is_demo=True, llm_investigation_enabled=False)
     db.add(project)
     db.flush()
-    log_activity(db, "project", f"Loaded synthetic demo '{spec.project_name}'.", project.id, f"/projects/{project.id}")
-    ds = create_dataset(db, project, to_csv_bytes(records), spec.filename, spec.filename.rsplit(".", 1)[0], is_synthetic=True)
-    apply_mapping(db, ds, ColumnMapping(**spec.mapping))
-    run = run_evaluation(db, project, ds, {"task_type": spec.task, "label": "Baseline (synthetic)"})
+    project_id = project.id
+    try:
+        log_activity(db, "project", f"Loaded synthetic demo '{spec.project_name}'.", project.id, f"/projects/{project.id}")
+        ds = create_dataset(db, project, to_csv_bytes(records), spec.filename, spec.filename.rsplit(".", 1)[0], is_synthetic=True)
+        apply_mapping(db, ds, ColumnMapping(**spec.mapping))
+        run = run_evaluation(db, project, ds, {"task_type": spec.task, "label": "Baseline (synthetic)"})
+    except Exception:
+        # Never leave a half-built demo project behind.
+        db.rollback()
+        leftover = db.get(Project, project_id)
+        if leftover is not None:
+            db.delete(leftover)
+            db.commit()
+        raise
     return project, run

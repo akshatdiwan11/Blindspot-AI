@@ -82,3 +82,20 @@ def test_dtype_inference():
     assert infer_dtype(['{"a":1}', "[1]"]) == "json"
     assert infer_dtype(["a", "b", "a"]) == "categorical"
     assert guess_mapping([])["expected_column"] is None
+
+
+def test_task_suggestion_matches_each_demo():
+    from app.demo.catalog import DEMOS
+    from app.services.profiling import suggest_task
+
+    for key, spec in DEMOS.items():
+        records, _ = spec.generate()
+        expected = [r[spec.mapping["expected_column"]] for r in records]
+        assert suggest_task(expected)["task"] == spec.task, key
+
+
+def test_task_suggestion_free_text():
+    from app.services.profiling import suggest_task
+
+    assert suggest_task(["15 December", "The policy was updated", "Fraud", "Akshat Diwan"])["task"] == "text"
+    assert suggest_task([])["task"] == "text"

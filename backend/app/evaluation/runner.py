@@ -32,6 +32,9 @@ def evaluate_records(records: list[dict[str, Any]], mapping: dict[str, Any], con
         expected.append(exp)
         actual.append(r.get(act_col))
     if not indices:
+        if config.task_type == "json":
+            raise ValidationFailed("No records can be evaluated as JSON: none of the expected outputs is valid JSON. "
+                                   "If the outputs are plain text, choose the text task instead.")
         raise ValidationFailed("No records can be evaluated: every record is missing a usable expected output.")
     if config.task_type == "classification":
         out = evaluate_classification(indices, case_ids, expected, actual, config.classification)

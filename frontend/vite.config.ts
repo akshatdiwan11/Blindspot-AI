@@ -10,6 +10,13 @@ export default defineConfig({
     port: 5173,
     proxy: { "/api": { target: apiTarget, changeOrigin: true } },
   },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: { react: ["react", "react-dom", "react-router-dom"], charts: ["recharts"] },
+      },
+    },
+  },
   preview: { port: 4173, proxy: { "/api": { target: apiTarget, changeOrigin: true } } },
   test: {
     environment: "jsdom",

@@ -9,7 +9,8 @@ BACKEND = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(BACKEND))
 
 _tmp = tempfile.mkdtemp(prefix="blindspot-test-")
-os.environ["DATABASE_URL"] = f"sqlite:///{_tmp}/test.db"
+# Set TEST_DATABASE_URL to run the suite against PostgreSQL instead of a temporary SQLite file.
+os.environ["DATABASE_URL"] = os.environ.get("TEST_DATABASE_URL") or f"sqlite:///{_tmp}/test.db"
 os.environ["STORAGE_DIR"] = f"{_tmp}/storage"
 os.environ["OPENAI_API_KEY"] = ""
 os.environ["LLM_API_KEY"] = ""

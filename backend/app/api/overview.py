@@ -25,7 +25,10 @@ def overview(project_id: int | None = None, db: Session = Depends(get_db)) -> di
     investigations = db.scalars(scoped(select(Investigation), Investigation)).all()
     exp_status = dict(db.execute(scoped(select(Experiment.status, func.count(Experiment.id)), Experiment).group_by(Experiment.status)).all())
     projects_q = select(func.count(Project.id)) if project_id is None else select(func.count(Project.id)).where(Project.id == project_id)
-    demo_projects = db.scalar(select(func.count(Project.id)).where(Project.is_demo.is_(True))) or 0
+    demo_q = select(func.count(Project.id)).where(Project.is_demo.is_(True))
+    if project_id is not None:
+        demo_q = demo_q.where(Project.id == project_id)
+    demo_projects = db.scalar(demo_q) or 0
     error_types: dict[str, int] = {}
     if latest:
         for c in latest.case_results:

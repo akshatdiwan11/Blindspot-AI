@@ -62,6 +62,8 @@ def update_project(body: ProjectUpdate, project: Project = Depends(project_dep),
         project.name = data["name"].strip()
     if "description" in data and data["description"] is not None:
         project.description = data["description"]
+    if data.get("evaluation_task"):
+        project.evaluation_task = data["evaluation_task"]
     if "llm_investigation_enabled" in data and data["llm_investigation_enabled"] is not None:
         project.llm_investigation_enabled = data["llm_investigation_enabled"]
         log_activity(db, "settings", f"LLM investigation {'enabled' if project.llm_investigation_enabled else 'disabled'} for '{project.name}'.", project.id)

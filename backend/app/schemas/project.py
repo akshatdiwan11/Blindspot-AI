@@ -39,6 +39,7 @@ class ProjectUpdate(BaseModel):
     name: str | None = Field(None, min_length=1, max_length=120)
     description: str | None = Field(None, max_length=2000)
     llm_investigation_enabled: bool | None = None
+    evaluation_task: TaskType | None = None
 
 
 class ProjectOut(ORMModel):

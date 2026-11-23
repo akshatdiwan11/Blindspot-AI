@@ -49,6 +49,12 @@ def get_dataset(ds: Dataset = Depends(dataset_dep)):
     return ds
 
 
+def _rows(ds: Dataset, records: list[dict]) -> list[dict]:
+    """Rows in the uploaded file's column order (PostgreSQL JSONB does not keep key order)."""
+    order = [c["name"] for c in (ds.columns or [])]
+    return [{"_row": i + 1, **{k: r.get(k) for k in order}, **{k: v for k, v in r.items() if k not in order}} for i, r in enumerate(records)]
+
+
 @router.get("/{dataset_id}/preview", response_model=DatasetPreview)
 def preview_dataset(
     ds: Dataset = Depends(dataset_dep),
@@ -58,7 +64,7 @@ def preview_dataset(
     column: str | None = Query(None, max_length=200),
     value: str | None = Query(None, max_length=500),
 ):
-    rows = [{"_row": i + 1, **r} for i, r in enumerate(ds.records)]
+    rows = _rows(ds, ds.records)
     if column and value is not None:
         rows = [r for r in rows if str(r.get(column)) == value]
     if q:
@@ -71,7 +77,7 @@ def preview_dataset(
 @router.put("/{dataset_id}/mapping", response_model=DatasetPreview)
 def set_mapping(body: ColumnMapping, ds: Dataset = Depends(dataset_dep), db: Session = Depends(get_db)):
     check = apply_mapping(db, ds, body)
-    rows = [{"_row": i + 1, **r} for i, r in enumerate(ds.records[:20])]
+    rows = _rows(ds, ds.records[:20])
     return DatasetPreview(dataset=DatasetOut.model_validate(ds), profile=ds.profile, sample_rows=rows, total=ds.row_count, limit=20, offset=0, mapping_check=check)
 
 
