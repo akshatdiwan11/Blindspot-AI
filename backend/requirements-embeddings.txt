@@ -1,0 +1,4 @@
+# Optional: enables sentence-transformer embeddings for clustering and retrieval.
+# The app works without it (TF-IDF is the default). CPU-only is fine.
+-r requirements.txt
+sentence-transformers>=3.0

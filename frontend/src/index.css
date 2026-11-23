@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+html, body, #root { min-height: 100%; }
+body { background: #0B1020; }
+::selection { background: #6275FF55; }
+*::-webkit-scrollbar { width: 10px; height: 10px; }
+*::-webkit-scrollbar-thumb { background: #22304A; border-radius: 8px; border: 2px solid #0B1020; }
+*::-webkit-scrollbar-track { background: transparent; }
