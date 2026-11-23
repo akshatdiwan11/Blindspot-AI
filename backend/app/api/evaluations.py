@@ -115,10 +115,9 @@ def failure_group_detail(group_id: int, run: EvaluationRun = Depends(run_dep), d
     lookup = case_lookup(run)
     fails = sorted([e for e in g.examples if e.is_failure], key=lambda e: (not e.representative, e.record_index))
     oks = [e for e in g.examples if not e.is_failure]
-    d = FailureGroupDetail.model_validate({**FailureGroupOut.model_validate(g).model_dump(), "examples": [], "successes": []})
-    d.examples = [c for c in (build_case(run.dataset, run, e.record_index, lookup, e.representative) for e in fails[:limit]) if c]
-    d.successes = [c for c in (build_case(run.dataset, run, e.record_index, lookup) for e in oks[: min(limit, 10)]) if c]
-    return d
+    examples = [c for c in (build_case(run.dataset, run, e.record_index, lookup, e.representative) for e in fails[:limit]) if c]
+    successes = [c for c in (build_case(run.dataset, run, e.record_index, lookup) for e in oks[: min(limit, 10)]) if c]
+    return FailureGroupDetail.model_validate({**FailureGroupOut.model_validate(g).model_dump(), "examples": examples, "successes": successes})
 
 
 @router.get("/evaluations/{run_id}/clusters", response_model=list[ClusterOut])
@@ -134,6 +133,5 @@ def cluster_detail(cluster_id: int, run: EvaluationRun = Depends(run_dep), db: S
     lookup = case_lookup(run)
     reps = set(c.representative_indices)
     order = c.representative_indices + [i for i in c.member_indices if i not in reps]
-    d = ClusterDetail.model_validate({**ClusterOut.model_validate(c).model_dump(), "examples": []})
-    d.examples = [x for x in (build_case(run.dataset, run, i, lookup, i in reps) for i in order[:limit]) if x]
-    return d
+    examples = [x for x in (build_case(run.dataset, run, i, lookup, i in reps) for i in order[:limit]) if x]
+    return ClusterDetail.model_validate({**ClusterOut.model_validate(c).model_dump(), "examples": examples})

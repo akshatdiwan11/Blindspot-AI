@@ -35,9 +35,10 @@ def compare_runs(a: EvaluationRun, b: EvaluationRun) -> dict[str, Any]:
     if not comparable:
         notes.append("The runs use different task types, so their metrics measure different things.")
     if a.dataset_id != b.dataset_id:
-        notes.append("The runs use different datasets. Differences may come from the data as well as the model.")
-    elif a.dataset_version != b.dataset_version:
-        notes.append("The runs use different versions of the dataset.")
+        if a.dataset.name == b.dataset.name and a.project_id == b.project_id:
+            notes.append(f"The runs use different versions of the dataset (v{a.dataset_version} and v{b.dataset_version}). Make sure the cases are the same before attributing changes to the model.")
+        else:
+            notes.append("The runs use different datasets. Differences may come from the data as well as the model.")
     if a.config != b.config:
         notes.append("The evaluation configurations differ (for example matching rules or thresholds).")
 
