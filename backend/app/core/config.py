@@ -8,7 +8,7 @@ from __future__ import annotations
 from functools import lru_cache
 from pathlib import Path
 
-from pydantic import Field, field_validator
+from pydantic import Field, field_validator, model_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 BACKEND_DIR = Path(__file__).resolve().parents[2]
@@ -21,8 +21,10 @@ class Settings(BaseSettings):
     environment: str = "development"
     log_level: str = "INFO"
 
-    # Database. PostgreSQL in Docker/production; SQLite works for quick local runs and tests.
-    database_url: str = "postgresql+psycopg2://blindspot:blindspot@localhost:5432/blindspot"
+    # Database. PostgreSQL in Docker/production. When DATABASE_URL is unset or empty the app still
+    # starts, on a SQLite file in storage_dir (fine for trying it out; on hosts with a temporary
+    # disk, such as Render's free plan, that data is lost on every restart).
+    database_url: str = ""
 
     # CORS origins for the frontend (comma separated).
     cors_origins: str = "http://localhost:5173,http://127.0.0.1:5173"
@@ -61,12 +63,24 @@ class Settings(BaseSettings):
     @field_validator("database_url")
     @classmethod
     def _normalise_db_url(cls, v: str) -> str:
+        v = (v or "").strip()
         # Render and Heroku hand out postgres:// URLs; SQLAlchemy needs the dialect spelled out.
         if v.startswith("postgres://"):
             v = "postgresql+psycopg2://" + v[len("postgres://"):]
         elif v.startswith("postgresql://"):
             v = "postgresql+psycopg2://" + v[len("postgresql://"):]
         return v
+
+    @model_validator(mode="after")
+    def _sqlite_fallback(self) -> "Settings":
+        if not self.database_url.strip():
+            self.storage_dir.mkdir(parents=True, exist_ok=True)
+            self.database_url = f"sqlite:///{(self.storage_dir / 'blindspot.db').resolve()}"
+        return self
+
+    @property
+    def database_kind(self) -> str:
+        return "sqlite" if self.database_url.startswith("sqlite") else "postgresql"
 
     @property
     def cors_origin_list(self) -> list[str]:

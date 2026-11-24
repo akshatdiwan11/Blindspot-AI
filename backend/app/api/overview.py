@@ -96,4 +96,5 @@ def public_settings(db: Session = Depends(get_db)) -> dict:
         "retention_days": s.retention_days,
         "analysis": {"min_group_size": s.min_group_size, "fdr_alpha": s.fdr_alpha, "embeddings_available": embeddings_available()},
         "environment": s.environment,
+        "database": s.database_kind,
     }

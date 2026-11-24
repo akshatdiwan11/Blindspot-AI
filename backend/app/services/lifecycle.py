@@ -32,6 +32,9 @@ def apply_retention_policy() -> int:
 def on_startup() -> None:
     settings = get_settings()
     settings.storage_dir.mkdir(parents=True, exist_ok=True)
+    if settings.database_kind == "sqlite" and settings.environment == "production":
+        log.warning("DATABASE_URL is not set: using a local SQLite file. On hosts with a temporary disk "
+                    "all data is lost when the service restarts. Set DATABASE_URL to a PostgreSQL URL to keep it.")
     try:
         apply_retention_policy()
     except Exception:  # the database may not be migrated yet; never block startup on housekeeping

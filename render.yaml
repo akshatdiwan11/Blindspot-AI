@@ -1,11 +1,10 @@
-# Render Blueprint: deploys the Blindspot AI API (Docker) and its PostgreSQL database.
+# Render Blueprint: deploys the Blindspot AI API (Docker).
 # In Render: New > Blueprint > pick this repository.
-databases:
-  - name: blindspot-ai-db
-    plan: free
-    databaseName: blindspot
-    user: blindspot
-
+#
+# No database is created here (Render allows only one free PostgreSQL database per account).
+# Paste a PostgreSQL connection URL into DATABASE_URL, for example a free Neon database.
+# If DATABASE_URL is left empty the API still starts, on a temporary SQLite file that is wiped
+# whenever the service restarts or wakes from sleep.
 services:
   - type: web
     name: blindspot-ai-api
@@ -17,10 +16,9 @@ services:
     envVars:
       - key: ENVIRONMENT
         value: production
+      # PostgreSQL connection URL, e.g. postgresql://user:password@host/dbname?sslmode=require
       - key: DATABASE_URL
-        fromDatabase:
-          name: blindspot-ai-db
-          property: connectionString
+        sync: false
       # The website (Cloudflare Worker) calls the API through its own domain, so CORS is only
       # needed if you call the API from somewhere else. Comma-separated origins.
       - key: CORS_ORIGINS

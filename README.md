@@ -60,7 +60,7 @@ tests are covered in [docs/deployment.md](docs/deployment.md).
   scikit-learn, httpx, fpdf2
 - **Frontend:** React 18, TypeScript, Vite, Tailwind CSS, Recharts, Lucide icons
 - **Tests:** pytest (67 tests, runnable on SQLite or PostgreSQL), Vitest and Testing Library
-- **Deployment:** Docker Compose; Render (API + PostgreSQL) and a Cloudflare Worker (website)
+- **Deployment:** Docker Compose; Render (API), any PostgreSQL such as Neon, and a Cloudflare Worker (website)
 
 ## Documentation
 

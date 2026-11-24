@@ -142,4 +142,5 @@ export interface DemoInfo { key: string; name: string; description: string; task
 export interface PublicSettings {
   llm: { configured: boolean; provider: string; model: string; base_url: string; timeout_seconds: number; max_retries: number; price_per_million_tokens: { input: number; output: number }; daily_budget_usd: number; spent_today_usd: number };
   limits: { max_upload_mb: number; max_rows: number }; retention_days: number; analysis: { min_group_size: number; fdr_alpha: number; embeddings_available: boolean }; environment: string;
+  database?: "postgresql" | "sqlite";
 }

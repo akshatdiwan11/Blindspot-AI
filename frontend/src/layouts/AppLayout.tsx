@@ -222,9 +222,23 @@ export default function AppLayout() {
           <ProfileMenu />
         </header>
         <main className="mx-auto max-w-[1400px] px-4 py-6 md:px-8 md:py-8">
+          <TemporaryStorageBanner />
           <Outlet />
         </main>
       </div>
+    </div>
+  );
+}
+
+/** Shown when a production server runs without a database URL and keeps data in a temporary SQLite file. */
+function TemporaryStorageBanner() {
+  const s = useAsync(() => api.settings(), []);
+  if (s.data?.database !== "sqlite" || s.data.environment !== "production") return null;
+  return (
+    <div className="mb-6 rounded-lg border border-warn/30 bg-warn/10 px-4 py-3 text-sm text-fg-muted">
+      <span className="font-medium text-warn">Temporary storage.</span> This server has no database connected, so projects and
+      uploads are cleared whenever it restarts. Set <code className="font-mono text-xs text-fg">DATABASE_URL</code> to a PostgreSQL
+      database to keep them.
     </div>
   );
 }

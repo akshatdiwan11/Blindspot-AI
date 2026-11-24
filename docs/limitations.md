@@ -43,8 +43,8 @@ Blindspot AI is built to be honest about what it can and cannot tell you.
   the request. This is fine at that size (about 2.5 s for 20,000 rows) but is not a job queue.
 - There are no user accounts. A deployment is a single shared workspace; put it behind your own
   access control if the data is sensitive.
-- The free Render plan sleeps when idle (the first request can take about a minute) and its free
-  PostgreSQL database expires after 30 days unless upgraded.
+- The free Render plan sleeps when idle (the first request can take about a minute). Without a
+  `DATABASE_URL` the server keeps data in a temporary SQLite file that is wiped on restart.
 
 ## Synthetic demo data
 
